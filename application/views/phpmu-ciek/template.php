@@ -52,7 +52,7 @@
             include "slide.php";
           }
           ?>
-          <!-- <?php echo $contents; ?> -->
+          <?php echo $contents; ?>
           <br>
         </div>
         <div class='col-md-4'>
