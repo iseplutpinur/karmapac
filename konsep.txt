@@ -22,7 +22,7 @@ Daftar menu ====================================================================
     Kominfo
     Wira Usaha
     Minat Dan Bakat
-    Pao
+    PAO
     Nalar Dan Intelektual
     Pakeak
     Keperempuanan
