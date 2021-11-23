@@ -1,0 +1,45 @@
+Galeri Kegiatan
+  Kegiatan
+    List foto
+      foto
+        keterangan
+        waktu
+        publisher
+
+Artikel
+  Kategori
+  publisher
+  tags
+
+Daftar menu ============================================================================================================
+  Home
+  Tentang Kami
+    Struktur Kepengurusan
+    Visi Misi
+    Generasi Dan Logo
+
+  Profil
+    Kominfo
+    Wira Usaha
+    Minat Dan Bakat
+    Pao
+    Nalar Dan Intelektual
+    Pakeak
+    Keperempuanan
+    Sosmas
+
+  Artikel
+  Galeri
+    Kegiatan
+    Lain-Lain
+  Kontak
+
+
+Fitur ==================================================================================================================
+Multi Periode
+Artikel
+Galeri Kegiatan
+Struktur Berdasarkan Periode Kepengurusan
+Pendaftaran Acara2 di organisasi (forms)
+Download
+
