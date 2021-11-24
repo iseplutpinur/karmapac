@@ -73,3 +73,9 @@ program kerja text
 logo
 
 crud tambah singkat dan detail
+
+== Sitemap Home
+header
+pengurus
+visi misi
+blog
