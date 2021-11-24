@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -49,6 +49,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'utama';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['default_controller'] = 'home';
+$route['404_override'] = 'my404';
+$route['translate_uri_dashes'] = TRUE;
+
+$route['javascripts/(:any).js'] = 'loader/javascripts/$1';
+$route['stylesheets/(:any).css'] = 'loader/stylesheets/$1';
+$route['pengaturan/hakakseslevel/(:num)'] = 'pengaturan/hakAksesLevel/index/$1';
+
+// tambahan
+$route['javascripts/contents/(:any).js'] = 'loader/javascripts_contents/$1';
+$route['javascripts/contents/(:any)/(:any).js'] = 'loader/javascripts_contents/$1/$2';
+$route['javascripts/contents/(:any)/(:any)/(:any).js'] = 'loader/javascripts_contents/$1/$2/$3';
+$route['javascripts/contents/(:any)/(:any)/(:any)/(:any).js'] = 'loader/javascripts_contents/$1/$2/$3/$4';
+$route['javascripts/contents/(:any)/(:any)/(:any)/(:any)/(:any).js'] = 'loader/javascripts_contents/$1/$2/$3/$4/$5';
+
+$route['stylesheets/contents/(:any).js'] = 'loader/stylesheets_contents/$1';
+$route['stylesheets/contents/(:any)/(:any).js'] = 'loader/stylesheets_contents/$1/$2';
+$route['stylesheets/contents/(:any)/(:any)/(:any).js'] = 'loader/stylesheets_contents/$1/$2/$3';
+
+$route['admin']      = 'admin/login';

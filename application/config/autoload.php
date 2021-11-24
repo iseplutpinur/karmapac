@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -58,7 +58,13 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('session','database','pagination','table','form_validation','template','user_agent','email');
+$autoload['libraries'] = array(
+	'database',
+	'session',
+	'b_password',
+	'sesion',
+	'files_summernote'
+);
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +95,12 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','form','download','html','cookie','engine','phpmu');
+$autoload['helper'] = array(
+	'url',
+	'file',
+	'application',
+	'tanggal',
+);
 
 /*
 | -------------------------------------------------------------------
@@ -103,7 +114,9 @@ $autoload['helper'] = array('url','form','download','html','cookie','engine','ph
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array();
+$autoload['config'] = array(
+	'application',
+);
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +145,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('model_album','model_shoutbox','model_sekilasinfo','model_polling','model_download','model_hubungi','model_utama','model_agenda','model_berita','model_halaman','model_menu','model_iklan','model_users','model_modul','model_identitas','model_template');
+$autoload['model'] = array('defaultModel' => 'default');
