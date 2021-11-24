@@ -192,7 +192,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Sarjana Teknik</td>
+                                <td>Sarjana Tekuser_nik</td>
                                 <td>01-01-2015</td>
                                 <td>UNIKOM</td>
                             </tr>

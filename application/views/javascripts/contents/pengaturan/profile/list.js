@@ -41,7 +41,7 @@ $(function () {
         },
         { "data": "lev_nama" },
         { "data": "nama_partner" },
-        { "data": "nik" },
+        { "data": "user_nik" },
         { "data": "email" },
         { "data": "nama_depan" },
         { "data": "nama_belakang" },

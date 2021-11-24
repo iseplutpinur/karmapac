@@ -208,7 +208,7 @@ class Profile extends Render_Controller
             $sheet->setCellValue(chr(65 + $c) . "$row", ($row - 5));
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['lev_nama']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nama_partner']);
-            $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nik']);
+            $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['user_nik']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['email']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nama_depan']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nama_belakang']);
@@ -311,7 +311,7 @@ class Profile extends Render_Controller
             'columns' => $this->input->post('columns')
         ];
         $details = ['0' => [
-            'nik' => "999999999",
+            'user_nik' => "999999999",
             'lev_nama' => "Reader",
             'email' => "dummy@gmail.com",
             'nama_depan' => "Dummy",
@@ -460,7 +460,7 @@ class Profile extends Render_Controller
             $sheet->setCellValue(chr(65 + $c) . "$row", ($row - 5));
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['lev_nama']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nama_partner']);
-            $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nik']);
+            $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['user_nik']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['email']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nama_depan']);
             $sheet->setCellValue(chr(65 + ++$c) . "$row", $detail['nama_belakang']);
@@ -651,7 +651,7 @@ class Profile extends Render_Controller
                 $body_table .= "<td style=\"text-align:center\">{$num}</td>";
                 $body_table .= "<td>{$detail['lev_nama']}</td>";
                 // $body_table .= "<td>{$detail['nama_partner']}</td>";
-                $body_table .= "<td>{$detail['nik']}</td>";
+                $body_table .= "<td>{$detail['user_nik']}</td>";
                 $body_table .= "<td>{$detail['email']}</td>";
                 $body_table .= "<td>{$detail['nama_depan']}</td>";
                 $body_table .= "<td>{$detail['nama_belakang']}</td>";
@@ -747,7 +747,7 @@ class Profile extends Render_Controller
 
                 $tbh = $this->db->insert('users', [
                     "id_partner"   => $partner['id'],
-                    "nik"   => $val[3] == "" ? NULL : $val[3],
+                    "user_nik"   => $val[3] == "" ? NULL : $val[3],
                     "user_nama"  => $val[5] == "" ? NULL : $val[5],
                     "user_email"  => $val[4] == "" ? NULL : $val[4],
                     "user_email_status"  => 0,
@@ -1054,11 +1054,11 @@ class Profile extends Render_Controller
         }
     }
 
-    public function nikCheck()
+    public function user_nikCheck()
     {
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('', '');
-        $this->form_validation->set_rules('nik', 'nik', 'trim|required|numeric');
+        $this->form_validation->set_rules('user_nik', 'user_nik', 'trim|required|numeric');
         $this->form_validation->set_rules('id_user', 'Id User', 'trim|required|numeric');
         if ($this->form_validation->run() == FALSE) {
             $this->output_json([
@@ -1067,9 +1067,9 @@ class Profile extends Render_Controller
                 'message' => validation_errors()
             ], 400);
         } else {
-            $nik = $this->input->post('nik');
+            $user_nik = $this->input->post('user_nik');
             $id_user = $this->input->post('id_user');
-            $result = $this->model->nikCheck($nik, $id_user);
+            $result = $this->model->user_nikCheck($user_nik, $id_user);
 
             $code = $result == null ? 200 : 409;
             $status = $result == null;
@@ -1250,7 +1250,7 @@ class Profile extends Render_Controller
         $this->form_validation->set_error_delimiters('', '');
         $this->form_validation->set_rules('id', 'id Profile', 'trim|required|numeric');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-        $this->form_validation->set_rules('nik', 'NIK', 'trim|required|numeric');
+        $this->form_validation->set_rules('user_nik', 'NIK', 'trim|required|numeric');
         $this->form_validation->set_rules('nama_depan', 'Nama Depan', 'trim|required');
         $this->form_validation->set_rules('jk', 'Jenis Kelamin', 'trim|required');
         // $this->form_validation->set_rules('id', 'id Level', 'trim|required|numeric');
@@ -1269,7 +1269,7 @@ class Profile extends Render_Controller
             $id = $this->input->post('id');
             $email = $this->input->post('email');
             $current_email = $this->input->post('current_email');
-            $nik = $this->input->post('nik');
+            $user_nik = $this->input->post('user_nik');
             $nama_depan = $this->input->post('nama_depan');
             $nama_belakang = $this->input->post('nama_belakang');
             $jk = $this->input->post('jk');
@@ -1281,7 +1281,7 @@ class Profile extends Render_Controller
             $result = $this->model->simpan(
                 $id,
                 $email,
-                $nik,
+                $user_nik,
                 $nama_depan,
                 $nama_belakang,
                 $jk,

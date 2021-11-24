@@ -19,8 +19,8 @@ $(document).ready(() => {
   $("#email").change(function () {
     emailCheck(this);
   })
-  $("#nik").change(function () {
-    nikCheck(this);
+  $("#user_nik").change(function () {
+    user_nikCheck(this);
   })
 
   $("#membership_jenis").change(function () {
@@ -666,18 +666,18 @@ function emailCheck(email_ele) {
   });
 }
 
-function nikCheck(nik_ele) {
-  const nik = $(nik_ele);
-  if (nik.val() == '') {
+function user_nikCheck(user_nik_ele) {
+  const user_nik = $(user_nik_ele);
+  if (user_nik.val() == '') {
     return;
   }
 
-  nik.attr('readonly', '')
+  user_nik.attr('readonly', '')
   $.ajax({
-    url: '<?= base_url() ?>pengaturan/profile/nikCheck',
+    url: '<?= base_url() ?>pengaturan/profile/user_nikCheck',
     data: {
       id_user: global_id_user,
-      nik: nik.val()
+      user_nik: user_nik.val()
     },
     type: 'post',
     success: function (data) {
@@ -691,11 +691,11 @@ function nikCheck(nik_ele) {
         icon: 'error',
         title: data.responseJSON.message
       })
-      nik.val('');
-      nik.focus();
+      user_nik.val('');
+      user_nik.focus();
     },
     complete: function () {
-      nik.removeAttr('readonly');
+      user_nik.removeAttr('readonly');
     }
   });
 }

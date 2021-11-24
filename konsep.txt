@@ -38,8 +38,29 @@ Daftar menu ====================================================================
 Fitur ==================================================================================================================
 Multi Periode
 Artikel
+
 Galeri Kegiatan
-Struktur Berdasarkan Periode Kepengurusan
 Pendaftaran Acara2 di organisasi (forms)
 Download
 
+Peta aplikasi admin
+
+jabatan
+  list Periode
+    crud jabatan
+
+Periode
+
+
+
+
+rancangan database ====================================================================================================
+Galeri ==
+galeri detail
+galeri_tag_pengurus
+
+artikel ==
+artikel_kategori
+artikel_tags
+artikel_komentar
+artikel_jabatans

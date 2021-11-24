@@ -12,8 +12,8 @@
         <input type="hidden" name="is-ubah" id="is-ubah" value="<?= $isUbah ? 1 : 0; ?>">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="nik">NIK</label>
-            <input type="text" class="form-control" id="nik" name="nik" placeholder="NIK" required value="<?= $profile['nik'] ?>" />
+            <label for="user_nik">NIK</label>
+            <input type="text" class="form-control" id="user_nik" name="user_nik" placeholder="NIK" required value="<?= $profile['user_nik'] ?>" />
           </div>
         </div>
         <div class="col-md-6">

@@ -3,7 +3,7 @@ $(function () {
     function dynamic() {
         const table_html = $('#dt_basic');
         table_html.dataTable().fnDestroy()
-         table_html.DataTable({
+        table_html.DataTable({
             "ajax": {
                 "url": "<?= base_url()?>pengaturan/profile/ajax_data/",
                 "data": null,
@@ -16,7 +16,7 @@ $(function () {
             "autoWidth": false,
             "scrollX": true,
             "columns": [
-                { "data": "nik" },
+                { "data": "user_nik" },
                 { "data": "email" },
                 { "data": "nama_depan" },
                 { "data": "nama_belakang" },
@@ -130,7 +130,7 @@ const Hapus = (id) => {
 //             "autoWidth": false,
 //             "scrollX": true,
 //             "columns": [
-//                 { "data": "nik" },
+//                 { "data": "user_nik" },
 //                 { "data": "email" }
 //             ],
 //         });

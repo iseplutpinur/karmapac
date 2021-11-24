@@ -6,7 +6,7 @@ class ProfileModel extends Render_Model
     public function getAllData($draw = null, $show = null, $start = null, $cari = null, $order = null, $filter = null)
     {
         // select datatable
-        $this->db->select(" `a` .*, b.id_partner, `h`.lev_nama, `b`.`nik`, `b`.`user_email` as `email`,
+        $this->db->select(" `a` .*, b.id_partner, `h`.lev_nama, `b`.`user_nik`, `b`.`user_email` as `email`,
         (IFNULL((SELECT jenis_membership.nama FROM membership
             join jenis_membership on jenis_membership.id = membership.id_jenis_membership
             WHERE id_profile = a.id and membership.status = 1 limit 1), '')) as membership,
@@ -514,11 +514,11 @@ class ProfileModel extends Render_Model
             ->row_array();
     }
 
-    public function nikCheck($nik, $id_user)
+    public function user_nikCheck($user_nik, $id_user)
     {
-        return $this->db->select('nik')
+        return $this->db->select('user_nik')
             ->from('users')
-            ->where('nik', $nik)
+            ->where('user_nik', $user_nik)
             ->where('user_id <> ', $id_user)
             ->where('user_status <> ', 3)
             ->get()
@@ -685,7 +685,7 @@ class ProfileModel extends Render_Model
     public function simpan(
         $id,
         $email,
-        $nik,
+        $user_nik,
         $nama_depan,
         $nama_belakang,
         $jk,
@@ -730,7 +730,7 @@ class ProfileModel extends Render_Model
         $this->db->reset_query();
         // insert user
         if ($id_user == null) {
-            $id_user = $this->user_insert($level, $nama_depan, $no_telepon, $email, '123456', 1, $nik, $id_partner, 0);
+            $id_user = $this->user_insert($level, $nama_depan, $no_telepon, $email, '123456', 1, $user_nik, $id_partner, 0);
             $this->db->reset_query();
         }
         // update user
@@ -743,7 +743,7 @@ class ProfileModel extends Render_Model
             } else {
                 $change_email = $change_email ? 0 : 1;
             };
-            $this->user_update($id_user, $level, $nama_depan, $no_telepon, $email, '', 1, $nik, $id_partner, $change_email);
+            $this->user_update($id_user, $level, $nama_depan, $no_telepon, $email, '', 1, $user_nik, $id_partner, $change_email);
             $this->db->reset_query();
         }
 
@@ -790,7 +790,7 @@ class ProfileModel extends Render_Model
         return $return;
     }
 
-    private function user_insert($level, $nama, $telepon, $username, $password, $status, $nik, $id_partner, $change_email)
+    private function user_insert($level, $nama, $telepon, $username, $password, $status, $user_nik, $id_partner, $change_email)
     {
         $data['user_email_status']             = $change_email;
         $data['user_nama']             = $nama;
@@ -798,9 +798,9 @@ class ProfileModel extends Render_Model
         $data['user_password']         = $this->b_password->bcrypt_hash($password);
         $data['user_phone']         = $telepon ?? '';
         $data['user_status']         = $status;
-        $data['nik']         = $nik;
+        $data['user_nik']         = $user_nik;
         $data['id_partner']         = $id_partner;
-        $data['user_tgl_lahir']         = null;
+        $data['user_tanggal_lahir']         = null;
 
         // Insert users
         $execute                     = $this->db->insert('users', $data);
@@ -818,7 +818,7 @@ class ProfileModel extends Render_Model
         return $execute;
     }
 
-    private function user_update($id, $level, $nama, $telepon, $username, $password, $status, $nik, $id_partner, $change_email)
+    private function user_update($id, $level, $nama, $telepon, $username, $password, $status, $user_nik, $id_partner, $change_email)
     {
         $data['user_email_status']             = (string)$change_email;
         $data['user_nama']             = $nama;
@@ -826,8 +826,8 @@ class ProfileModel extends Render_Model
         $data['user_phone']         = $telepon ?? '';
         $data['user_status']         = $status;
         $data['id_partner']         = $id_partner;
-        $data['nik']         = $nik;
-        $data['user_tgl_lahir']         = null;
+        $data['user_nik']         = $user_nik;
+        $data['user_tanggal_lahir']         = null;
         $data['updated_at']         = Date("Y-m-d H:i:s", time());
         if ($password != '') {
             $data['user_password']         = $this->b_password->bcrypt_hash($password);
