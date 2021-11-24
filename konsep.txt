@@ -64,3 +64,12 @@ artikel_kategori
 artikel_tags
 artikel_komentar
 artikel_jabatans
+
+
+
+== detail jabatan untuk view mode belum visi dan misi
+Struktur (generate otomatis)
+program kerja text
+logo
+
+crud tambah singkat dan detail
