@@ -44,7 +44,7 @@ class Home extends Render_Controller
 	function __construct()
 	{
 		parent::__construct();
-		$this->default_template = 'templates/main';
+		$this->default_template = 'templates/karmapack';
 		$this->navigation_type = 'front';
 		$this->load->model('ProdukModel', 'model');
 		$this->load->library('plugin');

@@ -9,7 +9,7 @@
 |
 */
 
-$config['app_name']         = 'Toko Bunga Ucapan Bandung';
+$config['app_name']         = 'KARMAPAC';
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ $config['app_name']         = 'Toko Bunga Ucapan Bandung';
 |
 */
 
-$config['copyright']         = '&copy; 2021 Toko Bunga Ucapan Bandung';
+$config['copyright']         = '&copy; 2021 KARMAPAC';
 
 /*
 |--------------------------------------------------------------------------

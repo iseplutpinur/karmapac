@@ -2,17 +2,23 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 25, 2021 at 02:11 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.25
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 01, 2021 at 04:47 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `karmapack`
+-- Database: `karmapac`
 --
 
 -- --------------------------------------------------------
@@ -6580,6 +6586,84 @@ INSERT INTO `address_villages` (`id`, `district_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `artikel`
+--
+
+CREATE TABLE `artikel` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `detail` text DEFAULT NULL,
+  `tanggal` date DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel_kategori`
+--
+
+CREATE TABLE `artikel_kategori` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel_kategori_detail`
+--
+
+CREATE TABLE `artikel_kategori_detail` (
+  `id` int(11) NOT NULL,
+  `artikel_id` int(11) DEFAULT NULL,
+  `artikel_kategori_id` int(11) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel_tag`
+--
+
+CREATE TABLE `artikel_tag` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ci_sessions`
 --
 
@@ -6588,6 +6672,116 @@ CREATE TABLE `ci_sessions` (
   `ip_address` varchar(45) NOT NULL,
   `timestamp` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('076c7f31ign4lqn16n95s5uqvgeh12nj', '::1', 1638369573, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383336393537333b),
+('gkl2ns2ercqie0eea5e46scb4p9uma42', '::1', 1638369599, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383336393537333b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `download`
+--
+
+CREATE TABLE `download` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `file` text DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri`
+--
+
+CREATE TABLE `galeri` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri_detail`
+--
+
+CREATE TABLE `galeri_detail` (
+  `id` int(11) NOT NULL,
+  `galeri_id` int(11) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri_detail_komentar`
+--
+
+CREATE TABLE `galeri_detail_komentar` (
+  `id` int(11) NOT NULL,
+  `galeri_detail_id` int(11) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `komentar` text DEFAULT NULL,
+  `tanggal` date DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri_tag_pengurus`
+--
+
+CREATE TABLE `galeri_tag_pengurus` (
+  `id` int(11) NOT NULL,
+  `galeri_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -6878,6 +7072,26 @@ INSERT INTO `menu_front` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterang
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pengurus_hobi`
+--
+
+CREATE TABLE `pengurus_hobi` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengurus_jabatan`
 --
 
@@ -6907,6 +7121,131 @@ CREATE TABLE `pengurus_jabatan_detail` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `pengurus_jabatan_id` int(11) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengurus_kontak`
+--
+
+CREATE TABLE `pengurus_kontak` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `pengurus_kontak_tipe_id` int(11) DEFAULT NULL,
+  `value1` varchar(255) DEFAULT NULL,
+  `value2` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengurus_kontak_tipe`
+--
+
+CREATE TABLE `pengurus_kontak_tipe` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengurus_pendidikan`
+--
+
+CREATE TABLE `pengurus_pendidikan` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `pengurus_pendidikan_jenis_id` int(11) DEFAULT NULL,
+  `dari` year(4) DEFAULT NULL,
+  `sampai` year(4) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengurus_pendidikan_jenis`
+--
+
+CREATE TABLE `pengurus_pendidikan_jenis` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengurus_pengalaman_lain`
+--
+
+CREATE TABLE `pengurus_pengalaman_lain` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengurus_pengalaman_organisasi`
+--
+
+CREATE TABLE `pengurus_pengalaman_organisasi` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `dari` year(4) DEFAULT NULL,
+  `sampai` year(4) DEFAULT NULL,
+  `jabatan` varchar(255) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Tidak Aktif | 1 Aktif',
   `created_by` int(11) DEFAULT NULL,
   `updated_by` int(11) DEFAULT NULL,
@@ -7369,11 +7708,98 @@ ALTER TABLE `address_villages`
   ADD KEY `villages_district_id_index` (`district_id`);
 
 --
+-- Indexes for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `artikel_kategori`
+--
+ALTER TABLE `artikel_kategori`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `artikel_kategori_detail`
+--
+ALTER TABLE `artikel_kategori_detail`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `artikel_id` (`artikel_id`),
+  ADD KEY `artikel_kategori_id` (`artikel_kategori_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `artikel_tag`
+--
+ALTER TABLE `artikel_tag`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
 -- Indexes for table `ci_sessions`
 --
 ALTER TABLE `ci_sessions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
+
+--
+-- Indexes for table `download`
+--
+ALTER TABLE `download`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `galeri_detail`
+--
+ALTER TABLE `galeri_detail`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `galeri_id` (`galeri_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `galeri_detail_komentar`
+--
+ALTER TABLE `galeri_detail_komentar`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `galeri_detail_id` (`galeri_detail_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `galeri_tag_pengurus`
+--
+ALTER TABLE `galeri_tag_pengurus`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `galeri_id` (`galeri_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
 
 --
 -- Indexes for table `home_excess`
@@ -7448,15 +7874,25 @@ ALTER TABLE `menu_front`
   ADD PRIMARY KEY (`menu_id`);
 
 --
+-- Indexes for table `pengurus_hobi`
+--
+ALTER TABLE `pengurus_hobi`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
 -- Indexes for table `pengurus_jabatan`
 --
 ALTER TABLE `pengurus_jabatan`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `parrent_id` (`parrent_id`),
-  ADD KEY `pengurus_periode_id` (`pengurus_periode_id`),
   ADD KEY `created_by` (`created_by`),
   ADD KEY `updated_by` (`updated_by`),
-  ADD KEY `deleted_by` (`deleted_by`);
+  ADD KEY `deleted_by` (`deleted_by`),
+  ADD KEY `parrent_id` (`parrent_id`),
+  ADD KEY `pengurus_periode_id` (`pengurus_periode_id`);
 
 --
 -- Indexes for table `pengurus_jabatan_detail`
@@ -7465,6 +7901,66 @@ ALTER TABLE `pengurus_jabatan_detail`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `pengurus_jabatan_id` (`pengurus_jabatan_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `pengurus_kontak`
+--
+ALTER TABLE `pengurus_kontak`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `pengurus_kontak_tipe_id` (`pengurus_kontak_tipe_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `pengurus_kontak_tipe`
+--
+ALTER TABLE `pengurus_kontak_tipe`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `pengurus_pendidikan`
+--
+ALTER TABLE `pengurus_pendidikan`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `pengurus_pendidikan_jenis_id` (`pengurus_pendidikan_jenis_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `pengurus_pendidikan_jenis`
+--
+ALTER TABLE `pengurus_pendidikan_jenis`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `pengurus_pengalaman_lain`
+--
+ALTER TABLE `pengurus_pengalaman_lain`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `created_by` (`created_by`),
+  ADD KEY `updated_by` (`updated_by`),
+  ADD KEY `deleted_by` (`deleted_by`);
+
+--
+-- Indexes for table `pengurus_pengalaman_organisasi`
+--
+ALTER TABLE `pengurus_pengalaman_organisasi`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
   ADD KEY `created_by` (`created_by`),
   ADD KEY `updated_by` (`updated_by`),
   ADD KEY `deleted_by` (`deleted_by`);
@@ -7594,6 +8090,60 @@ ALTER TABLE `whatsapp`
 --
 
 --
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `artikel_kategori`
+--
+ALTER TABLE `artikel_kategori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `artikel_kategori_detail`
+--
+ALTER TABLE `artikel_kategori_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `artikel_tag`
+--
+ALTER TABLE `artikel_tag`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `download`
+--
+ALTER TABLE `download`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `galeri_detail`
+--
+ALTER TABLE `galeri_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `galeri_detail_komentar`
+--
+ALTER TABLE `galeri_detail_komentar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `galeri_tag_pengurus`
+--
+ALTER TABLE `galeri_tag_pengurus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `home_excess`
 --
 ALTER TABLE `home_excess`
@@ -7642,9 +8192,57 @@ ALTER TABLE `menu_front`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `pengurus_hobi`
+--
+ALTER TABLE `pengurus_hobi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_jabatan`
+--
+ALTER TABLE `pengurus_jabatan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_jabatan_detail`
+--
+ALTER TABLE `pengurus_jabatan_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_kontak`
+--
+ALTER TABLE `pengurus_kontak`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_pendidikan`
+--
+ALTER TABLE `pengurus_pendidikan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_pengalaman_lain`
+--
+ALTER TABLE `pengurus_pengalaman_lain`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_pengalaman_organisasi`
+--
+ALTER TABLE `pengurus_pengalaman_organisasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `pengurus_periode`
 --
 ALTER TABLE `pengurus_periode`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengurus_periode_detail`
+--
+ALTER TABLE `pengurus_periode_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -7736,6 +8334,84 @@ ALTER TABLE `address_villages`
   ADD CONSTRAINT `villages_district_id_foreign` FOREIGN KEY (`district_id`) REFERENCES `address_districts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD CONSTRAINT `artikel_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `artikel_kategori`
+--
+ALTER TABLE `artikel_kategori`
+  ADD CONSTRAINT `artikel_kategori_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_kategori_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_kategori_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `artikel_kategori_detail`
+--
+ALTER TABLE `artikel_kategori_detail`
+  ADD CONSTRAINT `artikel_kategori_detail_ibfk_1` FOREIGN KEY (`artikel_id`) REFERENCES `artikel` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_kategori_detail_ibfk_2` FOREIGN KEY (`artikel_kategori_id`) REFERENCES `artikel_kategori` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_kategori_detail_ibfk_3` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_kategori_detail_ibfk_4` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_kategori_detail_ibfk_5` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `artikel_tag`
+--
+ALTER TABLE `artikel_tag`
+  ADD CONSTRAINT `artikel_tag_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_tag_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `artikel_tag_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `download`
+--
+ALTER TABLE `download`
+  ADD CONSTRAINT `download_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `download_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `download_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `galeri_detail`
+--
+ALTER TABLE `galeri_detail`
+  ADD CONSTRAINT `galeri_detail_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_detail_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_detail_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_detail_ibfk_5` FOREIGN KEY (`galeri_id`) REFERENCES `galeri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `galeri_detail_komentar`
+--
+ALTER TABLE `galeri_detail_komentar`
+  ADD CONSTRAINT `galeri_detail_komentar_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_detail_komentar_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_detail_komentar_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_detail_komentar_ibfk_5` FOREIGN KEY (`galeri_detail_id`) REFERENCES `galeri_detail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `galeri_tag_pengurus`
+--
+ALTER TABLE `galeri_tag_pengurus`
+  ADD CONSTRAINT `galeri_tag_pengurus_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_tag_pengurus_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_tag_pengurus_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_tag_pengurus_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `galeri_tag_pengurus_ibfk_5` FOREIGN KEY (`galeri_id`) REFERENCES `galeri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `home_excess`
 --
 ALTER TABLE `home_excess`
@@ -7784,14 +8460,23 @@ ALTER TABLE `key_value`
   ADD CONSTRAINT `key_value_ibfk_4` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
+-- Constraints for table `pengurus_hobi`
+--
+ALTER TABLE `pengurus_hobi`
+  ADD CONSTRAINT `pengurus_hobi_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_hobi_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_hobi_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_hobi_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `pengurus_jabatan`
 --
 ALTER TABLE `pengurus_jabatan`
   ADD CONSTRAINT `pengurus_jabatan_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `pengurus_jabatan_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `pengurus_jabatan_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `pengurus_jabatan_ibfk_4` FOREIGN KEY (`pengurus_periode_id`) REFERENCES `pengurus_periode` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `pengurus_jabatan_ibfk_5` FOREIGN KEY (`parrent_id`) REFERENCES `pengurus_jabatan` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `pengurus_jabatan_ibfk_4` FOREIGN KEY (`parrent_id`) REFERENCES `pengurus_jabatan` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_jabatan_ibfk_5` FOREIGN KEY (`pengurus_periode_id`) REFERENCES `pengurus_periode` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `pengurus_jabatan_detail`
@@ -7802,6 +8487,60 @@ ALTER TABLE `pengurus_jabatan_detail`
   ADD CONSTRAINT `pengurus_jabatan_detail_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `pengurus_jabatan_detail_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pengurus_jabatan_detail_ibfk_5` FOREIGN KEY (`pengurus_jabatan_id`) REFERENCES `pengurus_jabatan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pengurus_kontak`
+--
+ALTER TABLE `pengurus_kontak`
+  ADD CONSTRAINT `pengurus_kontak_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_kontak_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_kontak_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_kontak_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_kontak_ibfk_5` FOREIGN KEY (`pengurus_kontak_tipe_id`) REFERENCES `pengurus_kontak_tipe` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pengurus_kontak_tipe`
+--
+ALTER TABLE `pengurus_kontak_tipe`
+  ADD CONSTRAINT `pengurus_kontak_tipe_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_kontak_tipe_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_kontak_tipe_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pengurus_pendidikan`
+--
+ALTER TABLE `pengurus_pendidikan`
+  ADD CONSTRAINT `pengurus_pendidikan_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pendidikan_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pendidikan_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pendidikan_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pendidikan_ibfk_5` FOREIGN KEY (`pengurus_pendidikan_jenis_id`) REFERENCES `pengurus_pendidikan_jenis` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pengurus_pendidikan_jenis`
+--
+ALTER TABLE `pengurus_pendidikan_jenis`
+  ADD CONSTRAINT `pengurus_pendidikan_jenis_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pendidikan_jenis_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pendidikan_jenis_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pengurus_pengalaman_lain`
+--
+ALTER TABLE `pengurus_pengalaman_lain`
+  ADD CONSTRAINT `pengurus_pengalaman_lain_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pengalaman_lain_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pengalaman_lain_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pengalaman_lain_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pengurus_pengalaman_organisasi`
+--
+ALTER TABLE `pengurus_pengalaman_organisasi`
+  ADD CONSTRAINT `pengurus_pengalaman_organisasi_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pengalaman_organisasi_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pengalaman_organisasi_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pengurus_pengalaman_organisasi_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `pengurus_periode`
@@ -7892,3 +8631,7 @@ ALTER TABLE `whatsapp`
   ADD CONSTRAINT `whatsapp_ibfk_3` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `whatsapp_ibfk_4` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

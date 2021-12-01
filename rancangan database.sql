@@ -42,18 +42,21 @@ CREATE TABLE `pengurus_jabatan_detail` (
   `pengurus_jabatan_id` int,
 );
 
+-- clear
 CREATE TABLE `pengurus_periode_detail` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
   `pengurus_periode_id` int
 );
 
+-- clear
 CREATE TABLE `pengurus_kontak_tipe` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nama` varchar(255),
   `keterangan` varchar(255)
 );
 
+-- clear
 CREATE TABLE `pengurus_kontak` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
@@ -62,12 +65,14 @@ CREATE TABLE `pengurus_kontak` (
   `value2` varchar(255)
 );
 
+-- clear
 CREATE TABLE `pengurus_pendidikan_jenis` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nama` varchar(255),
   `keterangan` varchar(255)
 );
 
+-- clear
 CREATE TABLE `pengurus_pendidikan` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
@@ -77,6 +82,7 @@ CREATE TABLE `pengurus_pendidikan` (
   `nama` varchar(255),
   `keterangan` text
 );
+
 
 CREATE TABLE `pengurus_pengalaman_organisasi` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
@@ -88,6 +94,7 @@ CREATE TABLE `pengurus_pengalaman_organisasi` (
   `keterangan` text
 );
 
+-- clear
 CREATE TABLE `pengurus_pengalaman_lain` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
@@ -95,13 +102,13 @@ CREATE TABLE `pengurus_pengalaman_lain` (
   `keterangan` text
 );
 
+-- clear
 CREATE TABLE `pengurus_hobi` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
   `nama` varchar(255),
   `keterangan` text
 );
-
 
 -- pengurus
 CREATE TABLE `galeri` (
@@ -110,6 +117,7 @@ CREATE TABLE `galeri` (
   `keterangan` text
 );
 
+-- clear
 CREATE TABLE `galeri_detail` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `galeri_id` int,
@@ -118,6 +126,7 @@ CREATE TABLE `galeri_detail` (
   `keterangan` text
 );
 
+-- clear
 CREATE TABLE `galeri_detail_komentar` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `galeri_detail_id` int,
@@ -127,6 +136,7 @@ CREATE TABLE `galeri_detail_komentar` (
   `tanggal` date
 );
 
+-- clear
 CREATE TABLE `galeri_tag_pengurus` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `galeri_id` int,
@@ -134,6 +144,7 @@ CREATE TABLE `galeri_tag_pengurus` (
   `keterangan` text
 );
 
+-- clear
 CREATE TABLE `artikel` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nama` varchar(255),
@@ -142,6 +153,7 @@ CREATE TABLE `artikel` (
   `tanggal` date
 );
 
+-- clear
 CREATE TABLE `artikel_kategori` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nama` varchar(255),
@@ -154,6 +166,7 @@ CREATE TABLE `artikel_kategori_detail` (
   `artikel_kategori_id` int
 );
 
+-- clear
 CREATE TABLE `artikel_tag` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nama` varchar(255),
@@ -181,6 +194,7 @@ CREATE TABLE `artikel_jabatans` (
   `pengurus_jabatan_id` int
 );
 
+-- clear
 CREATE TABLE `download` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `nama` varchar(255),
