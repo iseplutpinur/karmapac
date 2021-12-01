@@ -2,17 +2,17 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Nov 24, 2021 at 06:19 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.4.21
+-- Host: localhost
+-- Generation Time: Nov 25, 2021 at 02:11 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
--- Database: `karmapac`
+-- Database: `karmapack`
 --
 
 -- --------------------------------------------------------
@@ -6580,6 +6580,19 @@ INSERT INTO `address_villages` (`id`, `district_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ci_sessions`
+--
+
+CREATE TABLE `ci_sessions` (
+  `id` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `home_excess`
 --
 
@@ -7354,6 +7367,13 @@ ALTER TABLE `address_regencies`
 ALTER TABLE `address_villages`
   ADD PRIMARY KEY (`id`),
   ADD KEY `villages_district_id_index` (`district_id`);
+
+--
+-- Indexes for table `ci_sessions`
+--
+ALTER TABLE `ci_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
 -- Indexes for table `home_excess`
