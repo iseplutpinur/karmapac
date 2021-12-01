@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login | Toko Bunga Ucapan Bandung</title>
+  <title>Login | KARMAPACK</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -41,7 +41,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <span class="h5"><b>Toko Bunga Ucapan Bandung</b><br>Login Sebagai Administrator</span>
+        <span class="h5"><b>KARMAPACK</b><br>Login Sebagai Administrator</span>
       </div>
 
       <div class="card-body pt-3">
@@ -88,7 +88,7 @@
     </div>
     <!-- /.card -->
   </div>
-  <small class="form-text text-muted">&copy; 2021 Toko Bunga Ucapan Bandung</small>
+  <small class="form-text text-muted">&copy; 2021 KARMAPACK</small>
   <!-- /.login-box -->
 
   <!-- jQuery -->

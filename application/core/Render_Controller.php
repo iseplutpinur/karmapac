@@ -26,6 +26,7 @@ class Render_Controller extends CI_Controller
 	protected $content;
 
 	protected $navigation = array();
+	protected $navigation_front = null;
 	protected $data = array();
 	protected $plugins = array();
 	private   $plugin_scripts = array();
@@ -89,6 +90,7 @@ class Render_Controller extends CI_Controller
 				$navigation2 = $this->navFront2();
 				break;
 		}
+
 		$data = array(
 			// Application
 			'template_type' 	=> $this->template_type,
@@ -110,7 +112,6 @@ class Render_Controller extends CI_Controller
 			'breadcrumb_3_url' 	=> $this->breadcrumb_3_url,
 			'breadcrumb_4_url' 	=> $this->breadcrumb_4_url,
 
-
 			// Content
 			'plugin_styles' 	=> $this->plugin_styles,
 			'plugin_scripts' 	=> $this->plugin_scripts,
@@ -124,7 +125,6 @@ class Render_Controller extends CI_Controller
 
 		// frontend
 		if ($this->navigation_type == 'front') {
-
 			// list sosmed
 			$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 			if (!$list_item = $this->cache->get($this->cache_list_item)) {
@@ -142,7 +142,6 @@ class Render_Controller extends CI_Controller
 				$this->cache->save($this->cache_sosmed, $sosmed);
 			}
 
-
 			$data['front'] = [
 				'logo' => $this->key_get($this->key_logo),
 				'list_head' => $this->key_get($this->key_footer_list_head),
@@ -158,7 +157,6 @@ class Render_Controller extends CI_Controller
 		$this->load->view($template, $data);
 	}
 
-
 	protected function output_json($data, $code = null)
 	{
 		$code = $code == null ? 200 : $code;
@@ -166,7 +164,6 @@ class Render_Controller extends CI_Controller
 		$this->output->set_output(json_encode($data));
 		$this->output->set_status_header($code);
 	}
-
 
 	private function loadPlugins()
 	{
@@ -325,7 +322,6 @@ class Render_Controller extends CI_Controller
 		$dompdf->stream("{$data['doc_name']}.pdf");
 	}
 
-
 	public function send_email($email = null, $content = null, $subject = null)
 	{
 		$config = array(
@@ -352,7 +348,6 @@ class Render_Controller extends CI_Controller
 		$this->email->message($content);
 		return $this->email->send();
 	}
-
 
 	public function base64url_encode($data)
 	{
@@ -442,15 +437,13 @@ class Render_Controller extends CI_Controller
 	{
 		$child_html = '';
 		foreach ($data['child'] as $child) {
-			$child_html .= '<li><a ' . ($child['active'] ? 'class="active"' : '') . ' href="' . $child['url'] . '">' . $child['nama'] . '</a></li>';
+			$child_html .= '<li><a class="dropdown-item" href="' . $child['url'] . '">' . $child['nama'] . '</a></li>';
 		}
+
 		return '
-			<li>
-				<a ' . ($data['active'] ? 'class="active"' : '') . ' href="' . $data['url'] . '">
-					<span class="menu-text">' . $data['nama'] . '</span>
-					<i class="fa fa-angle-down"></i>
-				</a>
-				<ul class="dropdown-submenu dropdown-hover">
+			<li class="nav-item dropdown ' . ($data['active'] ? 'active' : '') . '">
+				<a class="nav-link dropdown-toggle" href="' . $data['url'] . '">' . $data['nama'] . '</a>
+				<ul class="dropdown-menu">
 				' . $child_html . '
 				</ul>
 			</li>
@@ -459,11 +452,11 @@ class Render_Controller extends CI_Controller
 
 	private function navHtml($data)
 	{
-		return '     <li>
-                  <a ' . ($data['active'] ? 'class="active"' : '') . ' href="' . $data['url'] . '">
-                    <span class="menu-text">' . $data['nama'] . '</span>
-                  </a>
-                </li>';
+		return '
+              <li class="nav-item ' . ($data['active'] ? 'active' : '') . '">
+                <a class="nav-link" href="' . $data['url'] . '">' . $data['nama'] . '</a>
+              </li>
+		';
 	}
 
 	private function haveChildHtml2($data)
@@ -500,10 +493,11 @@ class Render_Controller extends CI_Controller
 		$now = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
 		$now .= "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
+		$navigation_front = $this->navigation_front == null ? '' :  base_url($this->navigation_front);
 		$rows = [];
 		foreach ($parrents as $parrent) {
 			$parrent['url'] = $parrent['url'] == '#' ? $parrent['url'] : base_url($parrent['url']);
-			$parrent_active = $parrent['url'] == $now;
+			$parrent_active = in_array($parrent['url'], [$now, $navigation_front]);
 			$child_active = false;
 			$child = $this->getChild($parrent['id']);
 			$child_rows = [];
@@ -512,8 +506,8 @@ class Render_Controller extends CI_Controller
 				foreach ($child as $c) {
 					$c['url'] = base_url($c['url']);
 					$have_child = true;
-					$active = $c['url'] == $now;
-					$child_rows[] = array_merge($c, ['active' => $active]);
+					$active = in_array($c['url'], [$now, $navigation_front]);
+					$child_rows[] = array_merge(['active' => $active], $c);
 					if ($active) {
 						$child_active = true;
 					}
@@ -587,16 +581,14 @@ class Render_Controller extends CI_Controller
 		return $get;
 	}
 
-
 	function __construct()
 	{
 		parent::__construct();
-
-		$this->app_name 		= $this->config->item('app_name');
-		$this->copyright 		= $this->config->item('copyright');
-		$this->page_setting 	= $this->config->item('page_setting');
-		$this->page_nav 		= $this->config->item('page_nav');
-		$this->template_type 	= $this->config->item('template_type');
+		$this->app_name = $this->config->item('app_name');
+		$this->copyright = $this->config->item('copyright');
+		$this->page_setting = $this->config->item('page_setting');
+		$this->page_nav = $this->config->item('page_nav');
+		$this->template_type = $this->config->item('template_type');
 
 		$this->load->library('plugin');
 	}

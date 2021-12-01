@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Karmapack</title>
+  <title><?= $title ?> | <?= $app_name ?></title>
   <meta name="description" content="Karmapack - Keluarga Mahasiswa dan Pelajar Cianjur Kidul">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -169,49 +169,9 @@
           <div class="collapse navbar-collapse justify-content-center centered-nav">
             <!-- menus -->
             <ul class="navbar-nav">
-              <li class="nav-item  active">
-                <a class="nav-link" href="<?= base_url() ?>">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#">Tentang Kami</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Struktur Kepengurusan</a></li>
-                  <li><a class="dropdown-item" href="#">Visi Misi</a></li>
-                  <li><a class="dropdown-item" href="#">Periode Kepengurusan</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#">Profil</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Kominfo</a></li>
-                  <li><a class="dropdown-item" href="#">Wira Usaha</a></li>
-                  <li><a class="dropdown-item" href="#">Minat Dan Bakat</a></li>
-                  <li><a class="dropdown-item" href="#">PAO</a></li>
-                  <li><a class="dropdown-item" href="#">Nalar Dan Intelektual</a></li>
-                  <li><a class="dropdown-item" href="#">Pakeak</a></li>
-                  <li><a class="dropdown-item" href="#">Keperempuanan</a></li>
-                  <li><a class="dropdown-item" href="#">Sosmas</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Artikel</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#">Galeri</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Kegiatan</a></li>
-                  <li><a class="dropdown-item" href="#">Lain Lain</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Pendaftaran</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Kontak</a>
-              </li>
+              <?= $navigation ?>
             </ul>
           </div>
-
         </div>
       </nav>
     </header>
@@ -625,7 +585,6 @@
               </nav>
             </div>
             <div class="col-lg-4">
-
               <!-- sidebar -->
               <div class="sidebar">
                 <!-- widget about -->
@@ -662,6 +621,8 @@
                     </ul>
                   </div>
                 </div>
+                <br>
+                <br>
               </div>
             </div>
           </div>
