@@ -463,19 +463,21 @@ class Render_Controller extends CI_Controller
 	{
 		$child_html = '';
 		foreach ($data['child'] as $child) {
-			$child_html .= '<li><a ' . ($child['active'] ? 'class="active"' : '') . ' href="' . $child['url'] . '">' . $child['nama'] . '</a></li>';
+			$child_html .= '<li><a href="' . $child['url'] . '">' . $child['nama'] . '</a></li>';
 		}
-		return '<li class="menu-item-has-children"><a ' . ($data['active'] ? 'class="active"' : '') . ' href="' . $data['url'] . '">' . $data['nama'] . '</a>
-				<ul class="dropdown">
-				' . $child_html . '
-				</ul>
-			</li>
+
+		return '<li ' . ($data['active'] ? 'class="active"' : '') . '>
+          <a href="' . $data['url'] . '">' . $data['nama'] . '</a>
+          <ul class="submenu">
+						' . $child_html . '
+          </ul>
+        </li>
 		';
 	}
 
 	private function navHtml2($data)
 	{
-		return '</li><li><a  ' . ($data['active'] ? 'class="active"' : '') . ' href="' . $data['url'] . '">' . $data['nama'] . '</a></li>';
+		return '<li ' . ($data['active'] ? 'class="active"' : '') . '> <a href="' . $data['url'] . '">' . $data['nama'] . '</a> </li>';
 	}
 
 	private function getNavArray()

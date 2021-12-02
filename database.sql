@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 01, 2021 at 04:47 PM
+-- Generation Time: Dec 03, 2021 at 12:29 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.21
 
@@ -11,14 +11,8 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `karmapac`
+-- Database: `komuni39_iseplutpi7`
 --
 
 -- --------------------------------------------------------
@@ -6679,8 +6673,22 @@ CREATE TABLE `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('076c7f31ign4lqn16n95s5uqvgeh12nj', '::1', 1638369573, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383336393537333b),
-('gkl2ns2ercqie0eea5e46scb4p9uma42', '::1', 1638369599, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383336393537333b);
+('2jj7bbg2a413t63006935bf8t2qmr8aa', '::1', 1638444774, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383434343737343b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('4lke5gte5a5v4tejrsohosdop653a1rf', '::1', 1638445478, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383434353437383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('711nllfnm99l6s222shmaqtvhmv2fqj4', '::1', 1638446211, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383434363231313b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('819vhikapovc38k4i78b1jivd51jgo3b', '::1', 1638487719, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383438373731383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('9n4hao41jbg8j14eisrq2laj9ua3mmom', '::1', 1638452535, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435323533313b),
+('a875pmt14il20flbdthub8dmekr1etca', '::1', 1638450850, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435303835303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('c09s0f31cfqsvp7sghios7u4qq4n4muh', '::1', 1638453576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435333433373b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('f9q49bre484pr8ptoc05peeendeqnmfi', '::1', 1638451205, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435313230353b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('i2aposnoi3s9d27vdb4pc91pnj8atb4r', '::1', 1638453003, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435333030333b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('j1hfckl1opd0sh844kspdlk8r618vt6d', '::1', 1638452389, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435323338393b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('j67bo83cf9n2qg3vcs1vks5pb6r56603', '::1', 1638453437, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435333433373b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('l14gnpegle6ftocbnurdmfeg10uh7hkc', '::1', 1638450533, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435303533333b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('lkonnb038l756udre2024g5q79a0htj7', '::1', 1638452000, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383435323030303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('nb3hjk69t2n96u6hjbodljthp6g38q3j', '::1', 1638445169, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383434353136393b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('t0oghrhojuvip0oa4mop98m7gfp8ba1j', '::1', 1638487718, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383438373731383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('uhj521tikhi915m5n9kjs12ug13pfe0m', '::1', 1638445865, 0x5f5f63695f6c6173745f726567656e65726174657c693a313633383434353836353b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d);
 
 -- --------------------------------------------------------
 
@@ -6867,7 +6875,7 @@ CREATE TABLE `home_slider` (
 --
 
 INSERT INTO `home_slider` (`id`, `foto`, `name`, `title`, `subtitle`, `description`, `status`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '59a901025be8f30dac7575dbaccfb89d.jpg', 'Slider 1', 'Welcome', 'KARMAPACK', '', 1, 1, 1, NULL, '2021-11-17 20:22:03', '2021-11-19 10:57:59', NULL),
+(1, '59a901025be8f30dac7575dbaccfb89d.jpg', 'Slider 1', 'Welcome', 'Toko Bunga Ucapan Bandung', '', 1, 1, 1, NULL, '2021-11-17 20:22:03', '2021-11-19 10:57:59', NULL),
 (2, 'e990707bc479e10e60a9fa7d17756a8d.jpg', 'afdsaf', 'asdfasdf', 'sasdfasdf', 'safasdf', 3, 1, NULL, 1, '2021-11-17 20:23:42', '2021-11-17 20:23:47', '2021-11-17 20:23:47'),
 (3, '9d18e4d337bdd0b3254192fddabbb8d4.jpg', 'Slider 2', 'Quality', 'Bunga Dengan Kualitas Terbaik', '', 1, 1, NULL, NULL, '2021-11-17 20:41:55', NULL, NULL);
 
@@ -6955,13 +6963,13 @@ CREATE TABLE `key_value` (
 
 INSERT INTO `key_value` (`key`, `value1`, `value2`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
 ('footer_contact', 'Info Kontak', '                <address>123, ABC, Road ##, Main City, Your address goes here.<br>Phone: 01234 567\r\n                  890<br>Email: https://example.com</address>', 1, 1, NULL, '2021-11-19 17:52:48', '2021-11-19 18:47:06', NULL),
-('footer_copyright', 'Copyright © ${(new Date().getFullYear())} KARMAPACK', NULL, 1, 1, NULL, '2021-11-19 17:52:48', '2021-11-19 18:46:33', NULL),
+('footer_copyright', 'Copyright © ${(new Date().getFullYear())} Toko Bunga Ucapan Bandung', NULL, 1, 1, NULL, '2021-11-19 17:52:48', '2021-11-19 18:46:33', NULL),
 ('footer_descritpion', 'Kami menyediakan berbagai macam rangkaian bunga dengan design yang modern yang tentunya bisa anda lakukan costum baik ukuran atau jenis bunga', NULL, 1, 1, NULL, '2021-11-19 15:22:55', '2021-11-19 18:17:33', NULL),
 ('footer_list_head', 'Menyediakan', NULL, 1, 1, NULL, '2021-11-19 17:52:48', '2021-11-19 18:52:33', NULL),
 ('logo', '6fbe94da589c94255915300bf665782c.png', '4707ee8ba9fff6de51d74efbe5a35ee7.png', 1, 1, NULL, '2021-11-19 15:15:03', '2021-11-19 15:41:06', NULL),
-('offer', 'Terlengkap Dan Terjangkau', 'KARMAPACK', 1, 1, NULL, '2021-11-17 21:17:10', '2021-11-17 21:55:55', NULL),
+('offer', 'Terlengkap Dan Terjangkau', 'Toko Bunga Ucapan Bandung', 1, 1, NULL, '2021-11-17 21:17:10', '2021-11-17 21:55:55', NULL),
 ('offer2', 'Terbaik Dan Terpercaya', 'TUNGGU APA LAGI', 1, 1, NULL, '2021-11-17 22:03:28', '2021-11-17 22:06:50', NULL),
-('offer_decritpion', '<p><span class=\"fw-bold\">KARMAPACK</span> merupakan salah satu toko bunga\r\n              terbaik di <span class=\"fw-bold\">Kota Bandung</span> dengan produk kami berbagai macam\r\n              karangan bunga dan rangkaian bunga seperti :\r\n            </p>\r\n            <br>\r\n            <div class=\"container\">\r\n              <ul style=\"list-style-type: disc;\">\r\n                <li>PAPAN BUNGA Single 2in1 Steroform</li>\r\n                <li>HANDBUQUET</li>\r\n                <li>BUQUET ( Meja, Standing, box )</li>\r\n                <li>SALIB, KRANS DUKA</li>\r\n                <li>Bunga Semat / kantong</li>\r\n                <li>Dekorasi Bahagia, Duka</li>\r\n                <li>Parcel Buah, Cookies</li>\r\n                <li>dll.</li>\r\n              </ul>\r\n            </div>\r\n\r\n            <br>\r\n            <p>Produk yang kami sediakan menggunakan bunga yang fresh dan bermacam warna yang bisa\r\n              disesuaikan untuk moment Anda. Selain itu kami juga menggunakan bunga buatan untuk pengganti\r\n              bunga asli agar karangan bunga Anda tidak cepat layu.</p>', NULL, 1, 1, NULL, '2021-11-17 21:17:10', '2021-11-17 21:56:15', NULL),
+('offer_decritpion', '<p><span class=\"fw-bold\">Toko Bunga Ucapan Bandung</span> merupakan salah satu toko bunga\r\n              terbaik di <span class=\"fw-bold\">Kota Bandung</span> dengan produk kami berbagai macam\r\n              karangan bunga dan rangkaian bunga seperti :\r\n            </p>\r\n            <br>\r\n            <div class=\"container\">\r\n              <ul style=\"list-style-type: disc;\">\r\n                <li>PAPAN BUNGA Single 2in1 Steroform</li>\r\n                <li>HANDBUQUET</li>\r\n                <li>BUQUET ( Meja, Standing, box )</li>\r\n                <li>SALIB, KRANS DUKA</li>\r\n                <li>Bunga Semat / kantong</li>\r\n                <li>Dekorasi Bahagia, Duka</li>\r\n                <li>Parcel Buah, Cookies</li>\r\n                <li>dll.</li>\r\n              </ul>\r\n            </div>\r\n\r\n            <br>\r\n            <p>Produk yang kami sediakan menggunakan bunga yang fresh dan bermacam warna yang bisa\r\n              disesuaikan untuk moment Anda. Selain itu kami juga menggunakan bunga buatan untuk pengganti\r\n              bunga asli agar karangan bunga Anda tidak cepat layu.</p>', NULL, 1, 1, NULL, '2021-11-17 21:17:10', '2021-11-17 21:56:15', NULL),
 ('offer_decritpion2', '            <p>Toko Bunga Papan Ucapan Bandung menawarka proses pemesanan yang sangat mudah, tinggal\r\n              cari\r\n              produk yang Anda inginkan, atau rekomendasi produk sesuai dengan moment yang Anda\r\n              butuhkan\r\n              melalui katalog produk di website ini, maupun langsung hubungi team CS kami yang siap\r\n              membantu anda 24 jam untuk membantu pemesanan bunga secara online dan offline.\r\n            </p>', NULL, 1, 1, NULL, '2021-11-17 22:03:28', '2021-11-17 22:07:17', NULL),
 ('product', 'Bunga Terbaik Dari Kami', 'BUNGA APA YANG ANDA CARI HARI INI ?', 1, 1, NULL, '2021-11-18 09:59:33', '2021-11-18 09:59:52', NULL),
 ('product2', 'Kamu Mungkin Juga Suka', 'PRODUK LAIN KAMI', 1, 1, NULL, '2021-11-19 07:14:04', '2021-11-19 07:16:22', NULL),
@@ -6986,7 +6994,8 @@ CREATE TABLE `level` (
 --
 
 INSERT INTO `level` (`lev_id`, `lev_nama`, `lev_keterangan`, `lev_status`, `created_at`) VALUES
-(1, 'Super Admin', 'Super Admin', 'Aktif', '2020-06-18 09:40:31');
+(1, 'Super Admin', 'Super Admin', 'Aktif', '2020-06-18 09:40:31'),
+(128, 'Pengurus', '-', 'Aktif', '2021-12-01 22:02:13');
 
 -- --------------------------------------------------------
 
@@ -7017,11 +7026,6 @@ INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `
 (5, 2, 'Level', '-', 4, 'far fa-circle', 'pengaturan/level', 'Aktif', '2020-06-18 02:40:07'),
 (6, 2, 'Pengguna', '-', 2, 'far fa-circle', 'pengaturan/pengguna', 'Aktif', '2020-06-18 02:40:07'),
 (7, 2, 'Ganti Password', 'Ganti password', 3, 'fa fa-key', 'pengaturan/password', 'Aktif', '2021-06-28 08:34:14'),
-(110, 0, 'Calon Ketua', 'Calon Ketua Umum\n', 1, 'fas fa-user', 'admin/CalonKetua', 'Aktif', '2021-10-28 17:04:18'),
-(111, 0, 'Pemilih', '-', 2, ' fas fa-tasks', 'admin/pemilih', 'Aktif', '2021-10-28 18:27:32'),
-(112, 0, 'Perhitungan Suara', '-', 3, 'far fa-comment', 'admin/Count', 'Aktif', '2021-10-28 19:46:03'),
-(113, 0, 'Reset Suara', 'Reset / Kosongkan Suara', 5, 'fas fa-undo', 'pengaturan/reset', 'Aktif', '2021-10-28 22:41:40'),
-(114, 0, 'Kunci Pemungutan Suara', '1', 4, 'fas fa-key', 'admin/kunci', 'Aktif', '2021-10-28 23:24:00'),
 (115, 118, 'Warna', 'Warna Produk', 3, 'far fa-circle', 'admin/product/color', 'Aktif', '2021-11-14 14:39:54'),
 (116, 118, 'Kategori', 'Kategori Produk', 2, 'far fa-circle', 'admin/product/category', 'Aktif', '2021-11-14 14:39:14'),
 (117, 118, 'Master', 'List daftar Produk', 1, 'far fa-circle', 'admin/product/item', 'Aktif', '2021-11-14 14:38:38'),
@@ -7034,7 +7038,8 @@ INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `
 (124, 0, 'WhatsApp', 'No whatsapp untuk produk', 3, 'fab fa-whatsapp', 'admin/whatsapp', 'Aktif', '2021-11-17 15:39:07'),
 (126, 0, 'Navigasi', '-', 4, 'fas fa-location-arrow', 'admin/menu', 'Aktif', '2021-11-17 19:09:01'),
 (127, 119, 'Logo', '-', 1, 'far fa-circle', 'admin/home/logo', 'Aktif', '2021-11-19 08:05:37'),
-(128, 119, 'Footer', '-', 2, 'far fa-circle', 'admin/home/footer', 'Aktif', '2021-11-19 08:08:39');
+(128, 119, 'Footer', '-', 2, 'far fa-circle', 'admin/home/footer', 'Aktif', '2021-11-19 08:08:39'),
+(129, 0, 'Kepengurusan', '-', 1, 'fas fa-sitemap', 'admin/kepengurusan', 'Aktif', '2021-12-02 08:02:13');
 
 -- --------------------------------------------------------
 
@@ -7059,15 +7064,26 @@ CREATE TABLE `menu_front` (
 --
 
 INSERT INTO `menu_front` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `menu_index`, `menu_icon`, `menu_url`, `menu_status`, `created_at`) VALUES
-(1, 0, 'Home', 'Halaman utama', 1, NULL, '/', 'Aktif', '2021-11-17 19:06:19'),
-(2, 0, 'BUNGA PAPAN', '', 2, NULL, '#', 'Aktif', '2021-11-17 19:18:47'),
-(3, 2, 'BUNGA WEDDING', '', 1, NULL, '/produk?category=bunga+wedding', 'Aktif', '2021-11-17 19:19:45'),
-(4, 2, 'BUNGA SELAMAT', '-', 2, NULL, '/produk?category=bunga+selamat', 'Aktif', '2021-11-17 19:20:20'),
-(5, 2, 'BUNGA DUKA', '', 3, NULL, '/produk?category=bunga+duka', 'Aktif', '2021-11-17 19:20:57'),
-(7, 0, 'BOX', '', 3, NULL, '/produk?category=box', 'Aktif', '2021-11-17 19:22:44'),
-(8, 0, 'STANDING FLOWER', '', 4, NULL, '/produk?category=standing-flower', 'Aktif', '2021-11-17 19:23:31'),
-(9, 0, 'BUNGA MEJA', '', 5, NULL, '/produk?category=bunga-meja', 'Aktif', '2021-11-17 19:26:16'),
-(10, 0, 'BUNGA BOUQUET', '', 6, NULL, '/produk?category=bunga+bouquet', 'Aktif', '2021-11-17 19:26:48');
+(11, 0, 'Home', '-', 1, NULL, '/', 'Aktif', '2021-12-01 22:02:23'),
+(12, 0, 'Tentang Kami', '-', 2, NULL, '#', 'Aktif', '2021-12-01 22:02:48'),
+(13, 12, 'Struktur Kepengurusan', '-', 1, NULL, '#', 'Aktif', '2021-12-01 22:03:17'),
+(14, 12, 'Visi Misi', '-', 2, NULL, '#', 'Aktif', '2021-12-01 22:04:28'),
+(15, 12, 'Periode Kepengurusan', '-', 3, NULL, '#', 'Aktif', '2021-12-01 22:04:41'),
+(16, 0, 'Profil', '-', 3, NULL, '#', 'Aktif', '2021-12-01 22:05:07'),
+(17, 16, 'Kominfo', '-', 1, NULL, '#', 'Aktif', '2021-12-01 22:05:28'),
+(18, 16, 'Wira Usaha', '-', 2, NULL, '#', 'Aktif', '2021-12-01 22:05:41'),
+(19, 16, 'Minat Dan Bakat', '-', 3, NULL, '#', 'Aktif', '2021-12-01 22:05:51'),
+(20, 16, 'PAO', '-', 4, NULL, '#', 'Aktif', '2021-12-01 22:05:59'),
+(21, 16, 'Nalar Dan Intelektual', '-', 5, NULL, '#', 'Aktif', '2021-12-01 22:06:09'),
+(22, 16, 'Pakeak', '-', 6, NULL, '#', 'Aktif', '2021-12-01 22:06:35'),
+(23, 16, 'Keperempuanan', '-', 7, NULL, '#', 'Aktif', '2021-12-01 22:06:43'),
+(24, 16, 'Sosmas', '-', 8, NULL, '#', 'Aktif', '2021-12-01 22:06:53'),
+(25, 0, 'Artikel', '-', 4, NULL, '#', 'Aktif', '2021-12-01 22:07:02'),
+(26, 0, 'Galeri', '-', 5, NULL, '#', 'Aktif', '2021-12-01 22:07:45'),
+(27, 0, 'Pendaftaran', '-', 6, NULL, '#', 'Aktif', '2021-12-01 22:07:55'),
+(28, 0, 'Kontak', '-', 7, NULL, '#', 'Aktif', '2021-12-01 22:08:01'),
+(29, 26, 'Kegiatan', '-', 1, NULL, '#', 'Aktif', '2021-12-01 22:08:31'),
+(30, 26, 'Lain Lain', '-', 2, NULL, '#', 'Aktif', '2021-12-01 22:08:43');
 
 -- --------------------------------------------------------
 
@@ -7263,10 +7279,11 @@ CREATE TABLE `pengurus_pengalaman_organisasi` (
 
 CREATE TABLE `pengurus_periode` (
   `id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
   `dari` year(4) DEFAULT NULL,
   `sampai` year(4) DEFAULT NULL,
   `nama` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) NOT NULL,
   `keterangan` text DEFAULT NULL,
   `slogan` text DEFAULT NULL,
   `visi` text DEFAULT NULL,
@@ -7279,6 +7296,14 @@ CREATE TABLE `pengurus_periode` (
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pengurus_periode`
+--
+
+INSERT INTO `pengurus_periode` (`id`, `foto`, `dari`, `sampai`, `nama`, `slug`, `keterangan`, `slogan`, `visi`, `misi`, `status`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, '9751fdd917fcb60556a3002062d3a8f8.jpeg', 2021, 2022, 'Kabinet Masagi', 'kabinet-masagi', '-', 'Ngabdi ka nagri bela ka nagara piken ngawujudkeun lemah nu sajati tur ngawangun cianjur pakidulan.', '              <p>\"Terwujudnya KARMAPACK dan masyarakat Cianjur Kidul yang menjungjung tinggi nilai, dan norma agama,\r\n                sosial\r\n                serta budaya lokal.\"</p>', '              <p>\r\n                1. Meningkatkan pemahaman dan pengalaman keagamaan bagi anggota KARMAPACK dan masyarakat Cianjru Kidul\r\n                <br>\r\n                2. Melakukan pengabdian kepada masyarakat<br>\r\n                3. Menumbuhkan rasa cinta terhadap seni dan budaya kedaerahan\r\n              </p>', 1, 1, 1, NULL, '2021-12-02 18:33:27', '2021-12-03 06:08:49', NULL),
+(4, '5d3d36347db339a75df16cf648c4a3b4.jpg', 2001, 2002, 'Tes', 'tes', 'Ket', 'Slogan', 'safsdafadsf', 'fdsafadsffsadf', 3, 1, 1, 1, '2021-12-02 20:57:48', '2021-12-03 06:08:53', '2021-12-03 06:08:53');
 
 -- --------------------------------------------------------
 
@@ -7591,7 +7616,8 @@ INSERT INTO `role_aplikasi` (`rola_id`, `rola_menu_id`, `rola_lev_id`, `created_
 (252, 124, 1, '2021-11-17 15:39:14'),
 (253, 126, 1, '2021-11-17 19:09:13'),
 (254, 127, 1, '2021-11-19 08:07:42'),
-(255, 128, 1, '2021-11-19 08:08:51');
+(255, 128, 1, '2021-11-19 08:08:51'),
+(256, 129, 1, '2021-12-02 08:02:21');
 
 -- --------------------------------------------------------
 
@@ -7673,7 +7699,7 @@ CREATE TABLE `whatsapp` (
 
 INSERT INTO `whatsapp` (`id`, `name`, `description`, `number`, `status`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Isep Lutpi Nur', '123', '85798132505', 0, 1, 1, NULL, '2021-11-18 00:58:52', '2021-11-18 01:15:48', NULL),
-(4, 'Nomor 2', 'Tes dua', '858578996321', 1, 1, 1, NULL, '2021-11-18 01:05:30', '2021-11-18 02:38:49', NULL),
+(4, 'Nomor 2', 'Tes dua', '858578996321', 0, 1, 1, NULL, '2021-11-18 01:05:30', '2021-12-03 05:57:22', NULL),
 (5, 'no 3', '', '123', 0, 1, 1, NULL, '2021-11-18 01:15:56', '2021-11-18 02:38:49', NULL);
 
 --
@@ -7970,7 +7996,6 @@ ALTER TABLE `pengurus_pengalaman_organisasi`
 --
 ALTER TABLE `pengurus_periode`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`),
   ADD KEY `created_by` (`created_by`),
   ADD KEY `updated_by` (`updated_by`),
   ADD KEY `deleted_by` (`deleted_by`);
@@ -8177,19 +8202,19 @@ ALTER TABLE `home_testimonials`
 -- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
-  MODIFY `lev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `lev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT for table `menu_front`
 --
 ALTER TABLE `menu_front`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `pengurus_hobi`
@@ -8237,7 +8262,7 @@ ALTER TABLE `pengurus_pengalaman_organisasi`
 -- AUTO_INCREMENT for table `pengurus_periode`
 --
 ALTER TABLE `pengurus_periode`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pengurus_periode_detail`
@@ -8291,7 +8316,7 @@ ALTER TABLE `product_reviews`
 -- AUTO_INCREMENT for table `role_aplikasi`
 --
 ALTER TABLE `role_aplikasi`
-  MODIFY `rola_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
+  MODIFY `rola_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=257;
 
 --
 -- AUTO_INCREMENT for table `role_users`
@@ -8548,8 +8573,7 @@ ALTER TABLE `pengurus_pengalaman_organisasi`
 ALTER TABLE `pengurus_periode`
   ADD CONSTRAINT `pengurus_periode_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `pengurus_periode_ibfk_2` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `pengurus_periode_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `pengurus_periode_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `pengurus_periode_ibfk_3` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `pengurus_periode_detail`
@@ -8631,7 +8655,3 @@ ALTER TABLE `whatsapp`
   ADD CONSTRAINT `whatsapp_ibfk_3` FOREIGN KEY (`updated_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `whatsapp_ibfk_4` FOREIGN KEY (`deleted_by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

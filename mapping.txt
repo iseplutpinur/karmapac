@@ -8,7 +8,7 @@
       / pengalaman organisasi
       / pengalaman lain
 
-# kepepengurusan (periode)
+# kepengurusan (periode)
   - list periode kepepengurusan
     / aktif, tidak aktif
     - jabatan

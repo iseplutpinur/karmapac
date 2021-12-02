@@ -729,48 +729,15 @@
 
     <!-- logo -->
     <div class="logo">
-      <h3>Karmapack</h3>
+      <h3><?= $app_name ?></h3>
     </div>
 
     <!-- menu -->
     <nav>
       <ul class="vertical-menu">
-        <li class="active">
-          <a href="<?= base_url() ?>">Home</a>
-        </li>
-        <li>
-          <a href="#">Tentang Kami</a>
-          <ul class="submenu">
-            <li><a href="#">Struktur Kepengurusan</a></li>
-            <li><a href="#">Visi Misi</a></li>
-            <li><a href="#">Periode Kepengurusan</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Profil</a>
-          <ul class="submenu">
-            <li><a href="#">Kominfo</a></li>
-            <li><a href="#">Wira Usaha</a></li>
-            <li><a href="#">Minat Dan Bakat</a></li>
-            <li><a href="#">PAO</a></li>
-            <li><a href="#">Nalar Dan Intelektual</a></li>
-            <li><a href="#">Pakeak</a></li>
-            <li><a href="#">Keperempuanan</a></li>
-            <li><a href="#">Sosmas</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Artikel</a></li>
-        <li>
-          <a href="#">Pages</a>
-          <ul class="submenu">
-            <li><a href="#">Kegiatan</a></li>
-            <li><a href="#">Lain Lain</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Kontak</a></li>
+        <?= $navigation2 ?>
       </ul>
     </nav>
-
 
     <!-- social icons -->
     <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
