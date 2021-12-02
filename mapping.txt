@@ -1,0 +1,32 @@
+# menu / submenu
+- halaman
+/ fitur:
+  - profile lengkap
+      / hobi
+      / kontak
+      / pendidikan
+      / pengalaman organisasi
+      / pengalaman lain
+
+# kepepengurusan (periode)
+  - list periode kepepengurusan
+    / aktif, tidak aktif
+    - jabatan
+      - anggota
+        - profile lengkap
+
+# pengurus (list semua pengurus)
+  - profile lengkap
+
+# Data Master
+  # hobi
+  # kontak
+  # pendidikan
+
+# Artikel
+  # Data
+    - komentar
+  # kategori
+  # tag
+
+# Home

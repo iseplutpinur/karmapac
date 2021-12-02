@@ -1,2 +1,8 @@
   tiap jabatan mempunyai visi dan misi
-  jabatan mempunyai slug
+  jabatan mempunyai slug dan nomor urut
+
+
+Fitur kontak belum database dan view nya
+fitur pendaftaran belum
+fitur download
+fitur medsos dari footer

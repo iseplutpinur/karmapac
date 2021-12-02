@@ -1,11 +1,11 @@
 {
-  "name": "Toko Bunga Papan Ucapan Bandung",
-  "short_name": "tokobunga",
-  "description": "Toko Bunga Papan Ucapan Bandung",
+  "name": "KARMAPACK",
+  "short_name": "karmapack",
+  "description": "Karmapack - Keluarga Mahasiswa dan Pelajar Cianjur Kidul",
   "start_url": "../../index.php",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "##E72463",
+  "theme_color": "#0092DF",
   "icons": [
     {
       "src": "./android-icon-36x36.png",
