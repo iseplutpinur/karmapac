@@ -87,8 +87,10 @@
       <!-- /.card-body -->
     </div>
     <!-- /.card -->
+    <div class="text-center px-3">
+      <small class="form-text text-muted"><?= $copyright ?></small>
+    </div>
   </div>
-  <small class="form-text text-muted">&copy; 2021 KARMAPACK</small>
   <!-- /.login-box -->
 
   <!-- jQuery -->
