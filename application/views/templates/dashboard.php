@@ -7,7 +7,6 @@
 	<title><?= $title ?> | <?= $app_name ?></title>
 
 	<!-- icon -->
-
 	<link rel="icon" href="<?= base_url() ?>assets/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>assets/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="<?= base_url() ?>assets/favicon/apple-icon-60x60.png">

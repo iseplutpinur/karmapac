@@ -9,7 +9,7 @@
 |
 */
 
-$config['app_name']         = 'KARMAPAC';
+$config['app_name']         = 'KARMAPACK';
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ $config['app_name']         = 'KARMAPAC';
 |
 */
 
-$config['copyright']         = '&copy; 2021 KARMAPAC';
+$config['copyright']         = '&copy; 2021 Karmapack. Persembahan Dari <a href="http://github.com/iseplutpinur">Isep Lutpi Nur</a> Bidang Kominfo.';
 
 /*
 |--------------------------------------------------------------------------
