@@ -61,10 +61,9 @@ class Pengguna extends Render_Controller
 		$level 						= $this->input->post('level');
 		$nama 						= $this->input->post('nama');
 		$telepon 					= $this->input->post('telepon');
-		$username 					= $this->input->post('username');
+		$username 				= $this->input->post('username');
 		$status 					= $this->input->post('status');
-		$password 					= $this->input->post('password');
-
+		$password 				= $this->input->post('password');
 		$exe 						= $this->pengguna->insert($level, $nama, $telepon, $username, $password, $status);
 
 		$this->output_json(

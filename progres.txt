@@ -1,16 +1,12 @@
 back
   jabatan ============================
-  get parrent jabatan [clear]
-  insert [clear]
-  update [clear]
-  datatable
-  edit (get_one)
   get pengurus list
-  pengurus
+
+  pengurus ===========================
+
+
 
 front jabatan
-slug
-  jabatan : [slug tahun dari sampai] + [nama parrent parrent] + [slug nama]
 
 
 
