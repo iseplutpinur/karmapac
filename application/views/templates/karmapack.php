@@ -110,6 +110,8 @@
   <div id="preloader">
     <div class="d-flex justify-content-center align-items-center flex-column" style="height: 90vh;">
       <img src="<?= base_url('assets/front') ?>/images/logo/300x300.png" style="max-width: 80px;" alt="logo" />
+
+      <!-- loading animation -->
       <div class="ms-2 lds-ellipsis">
         <div></div>
         <div></div>

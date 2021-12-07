@@ -60,6 +60,22 @@ class Render_Controller extends CI_Controller
 	{
 	}
 
+	protected function render404()
+	{
+		$this->default_template = 'templates/dashboard';
+		$this->load->library('plugin');
+		$this->load->helper('url');
+		// Page config:
+		$this->title = 'Error 404';
+		$this->title_show = false;
+		$this->content = 'err404';
+		$this->plugins = [];
+		$this->output->set_status_header('404');
+		// Commit render:
+		$this->render();
+		// exit();
+	}
+
 	protected function render($template = NULL)
 	{
 		$this->preRender();
@@ -359,12 +375,15 @@ class Render_Controller extends CI_Controller
 		return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT));
 	}
 
-	public function uploadImage($name)
+	public function uploadImage($name, $image_name = false)
 	{
 		$config['upload_path']          = $this->photo_path;
 		$config['allowed_types']        = 'jpg|png|jpeg|JPG|PNG|JPEG|svg|SVG';
-		$config['file_name']            = md5(uniqid("bunga", true));
-		$config['overwrite']            = true;
+		$config['file_name']            = Date('Y-m-d h-i-s') . '_karmapack_image_' . (isset($_FILES[$name]['name']) ? $_FILES[$name]['name'] : '');
+		if ($image_name) {
+			$config['file_name']            = Date('Y-m-d h-i-s') . '_karmapack_image_' . $image_name;
+		}
+		$config['overwrite']            = false;
 		$config['max_size']             = 8024;
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);

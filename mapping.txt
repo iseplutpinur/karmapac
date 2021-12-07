@@ -9,8 +9,8 @@
       / pengalaman lain
 
 # kepengurusan (periode)
-  - list periode kepepengurusan
-    / aktif, tidak aktif
+  - list periode kepepengurusan [clear]
+    / aktif, tidak aktif [clear]
     - jabatan
       - anggota
         - profile lengkap
