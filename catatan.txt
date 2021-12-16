@@ -13,6 +13,8 @@ Tujuan aplikasi
 Menjadi media informasi dan komunikasi untuk internal organisasi maupun eksternal.
 jadi aplikasi ini bisa untuk histori kepengurusan.
 
+fitur peristiwa penting
+
 fitur chat
 
 // Prototype

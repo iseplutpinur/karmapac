@@ -60,8 +60,8 @@
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label for="no_urut">Dari</label>
-                <input type="number" class="form-control" id="no_urut" name="no_urut" placeholder="Jabatan No Uurut Tahun" required />
+                <label for="no_urut">No Urut</label>
+                <input type="number" class="form-control" id="no_urut" name="no_urut" placeholder="No Uurut" required />
               </div>
             </div>
             <div class="col-lg-6">

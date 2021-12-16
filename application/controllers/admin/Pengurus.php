@@ -8,7 +8,7 @@ class Pengurus extends Render_Controller
         // Page Settings
         $this->title = 'Pengurus';
         $this->navigation = ['Pengurus'];
-        $this->plugins = ['datatables', 'summernote'];
+        $this->plugins = ['datatables'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Dashboard';
@@ -17,7 +17,7 @@ class Pengurus extends Render_Controller
         $this->breadcrumb_3_url = '#';
 
         // content
-        $this->content      = 'admin/kepengurusan/kepengurusan';
+        $this->content      = 'admin/pengurus/pengurus';
         // Send data to view
         $this->render();
     }
@@ -49,31 +49,25 @@ class Pengurus extends Render_Controller
         $email = $this->input->post("email");
         $password = $this->input->post("password");
         $status = $this->input->post("status");
-        $user_id = $this->id;
-        $result = $this->model->insert($user_id, $npp, $nama, $email, $password, $status);
-
+        $angkatan = $this->input->post("angkatan");
+        $result = $this->model->insert($npp, $nama, $angkatan, $email, $password, $status);
         $this->db->trans_complete();
         $code = $result ? 200 : 500;
         $this->output_json(["data" => $result], $code);
     }
 
-    public function edit()
-    {
-        $id = $this->input->get('id');
-        $result = $this->model->getOne($id);
-        $this->output_json($result);
-    }
-
     public function update()
     {
-        $id = $this->input->post("id");
+        $this->db->trans_start();
         $npp = $this->input->post("npp");
         $nama = $this->input->post("nama");
         $email = $this->input->post("email");
         $password = $this->input->post("password");
         $status = $this->input->post("status");
-        $user_id = $this->id;
-        $result = $this->model->update($id, $user_id, $npp, $nama, $email, $password, $status);
+        $angkatan = $this->input->post("angkatan");
+        $id = $this->input->post("id");
+        $result = $this->model->update($id, $npp, $nama, $angkatan, $email, $password, $status);
+        $this->db->trans_complete();
         $code = $result ? 200 : 500;
         $this->output_json(["data" => $result], $code);
     }
@@ -81,7 +75,7 @@ class Pengurus extends Render_Controller
     public function delete()
     {
         $id = $this->input->post("id");
-        $result = $this->model->delete($this->id, $id);
+        $result = $this->model->delete($id);
         $code = $result ? 200 : 500;
         $this->output_json(["data" => $result], $code);
     }
