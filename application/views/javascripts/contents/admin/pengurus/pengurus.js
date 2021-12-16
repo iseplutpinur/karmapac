@@ -42,10 +42,8 @@ $(function () {
                   <i class="fa fa-trash"></i> Hapus
                 </button>
             `;
-
             let btn = btn_ubah;
             btn += btn_hapus;
-
             return `<div class="pull-right">${btn}</div>`
           }, className: "nowrap"
         }

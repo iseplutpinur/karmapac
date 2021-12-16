@@ -41,7 +41,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label for="parrent_id">Utama</label>
-                <select class="form-control" id="parrent_id">
+                <select class="form-control" id="parrent_id" name="parrent_id">
 
                 </select>
               </div>
@@ -67,7 +67,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label for="slogan">Slogan</label>
-                <input type="text" class="form-control" id="slogan" name="slogan" placeholder="Slogan" required />
+                <input type="text" class="form-control" id="slogan" name="slogan" placeholder="Slogan" />
               </div>
             </div>
             <div class="col-lg-6">
