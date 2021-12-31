@@ -135,7 +135,11 @@ class JabatanModel extends Render_Model
 
     public function getOne($id)
     {
-        return $this->db->select('*')->from('pengurus_jabatan')->where('id', $id)->where('status <>', 3)->order_by('no_urut')->get()->row_array();
+        return $this->db->select('*')
+            ->from('pengurus_jabatan')
+            ->where('id', $id)
+            ->where('status <>', 3)
+            ->get()->row_array();
     }
 
 

@@ -74,7 +74,7 @@ $(function () {
             `;
 
             const btn_jabatan = `
-                <a class="btn btn-success btn-xs" href="<?= base_url() ?>admin/jabatan/index/${data}">
+                <a class="btn btn-success btn-xs" href="<?= base_url() ?>admin/jabatan/pengurus/${data}">
                   <i class="fas fa-users"></i> Pengurus
                 </a>
             `;

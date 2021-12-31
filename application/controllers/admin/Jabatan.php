@@ -163,6 +163,33 @@ class Jabatan extends Render_Controller
         }
     }
 
+    public function pengurus($jabatan_id = null)
+    {
+        // Page Settings
+        $this->title = 'Pengurus Jabatan';
+        $this->navigation = ['Kepengurusan'];
+        $this->plugins = ['datatables'];
+
+        // Breadcrumb setting
+        $this->breadcrumb_1 = 'Dashboard';
+        $this->breadcrumb_1_url = base_url() . 'admin/dashboard';
+        $this->breadcrumb_3 = 'Kepengurusan';
+        $this->breadcrumb_3_url = base_url() . 'admin/kepengurusan';
+        $this->breadcrumb_4 = 'Pengurus Jabatan';
+        $this->breadcrumb_4_url = '#';
+        // get data
+        $this->data['jabatan'] = $this->model->getOne($jabatan_id);
+        if (is_null($this->data['jabatan'])) {
+            $this->render404();
+            return;
+        }
+
+        // content
+        $this->content      = 'admin/kepengurusan/pengurus_jabatan';
+        // Send data to view
+        $this->render();
+    }
+
     function __construct()
     {
         parent::__construct();
