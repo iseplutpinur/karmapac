@@ -24,21 +24,16 @@ class DefaultModel extends Render_Model
 
 	public function sub_menu($menu_id = null)
 	{
-		$session_id = $this->session->userdata('data')['id'];
-
-		$where = array(
-			'b.menu_menu_id' 	=> $menu_id,
-			'b.menu_status' 	=> 'Aktif',
-			'd.role_user_id' 	=> $session_id
-		);
+		$session_level_id = $this->session->userdata('data')['level_id'];
 
 		$query = $this->db->select('*')
+			->from('role_aplikasi a')
 			->join('menu b', 'b.menu_id = a.rola_menu_id')
-			->join('level c', 'c.lev_id = a.rola_lev_id')
-			->join('role_users d', 'd.role_lev_id = c.lev_id')
-			->order_by('b.menu_index', 'asc')
-			->get_where('role_aplikasi a', $where)
-			->result_array();
+			->where([
+				'b.menu_menu_id' 	=> $menu_id,
+				'b.menu_status' 	=> 'Aktif',
+				'a.rola_lev_id' 	=> $session_level_id
+			])->get()->result_array();
 
 		return $query;
 	}

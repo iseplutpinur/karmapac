@@ -39,13 +39,11 @@ class Pengguna extends Render_Controller
 	public function getDataDetail()
 	{
 		$id 						= $this->input->post('id');
-
 		$exe 						= $this->pengguna->getDataDetail($id);
-
 		$this->output_json(
 			[
-				'id' 			=> $exe['role_user_id'],
-				'level' 		=> $exe['role_lev_id'],
+				'id' 			=> $id,
+				'level' 		=> $exe['level_id'],
 				'nama' 			=> $exe['user_nama'],
 				'phone' 		=> $exe['user_phone'],
 				'username' 		=> $exe['user_email'],

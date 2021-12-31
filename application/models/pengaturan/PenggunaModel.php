@@ -3,14 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class PenggunaModel extends Render_Model
 {
-
-
 	public function getAllData()
 	{
 		$exe = $this->db->select('*')
 			->from('users a')
-			->join('role_users b', 'a.user_id = b.role_user_id', 'left')
-			->join('level c', 'c.lev_id = b.role_lev_id', 'left')
+			->join('level c', 'c.lev_id = a.level_id', 'left')
 			->where('a.user_status <>', 3)
 			->get();
 
@@ -20,12 +17,11 @@ class PenggunaModel extends Render_Model
 
 	public function getDataDetail($id)
 	{
-		$exe 						= $this->db->select('*')
-			->join('users b', 'b.user_id = a.role_user_id', 'left')
-			->where('a.role_user_id', $id)
-			->get('role_users a');
-
-		return $exe->row_array();
+		return $this->db
+			->select('*')
+			->from('users a')
+			->where('user_id', $id)
+			->get()->row_array();
 	}
 
 
@@ -39,24 +35,21 @@ class PenggunaModel extends Render_Model
 
 	public function insert($level, $nama, $telepon, $username, $password, $status)
 	{
-		$data['user_nama'] 			= $nama;
-		$data['user_email'] 		= $username;
-		$data['user_password'] 		= $this->b_password->bcrypt_hash($password);
-		$data['user_phone'] 		= $telepon;
-		$data['user_status'] 		= $status;
+		$data['user_nama'] = $nama;
+		$data['user_email'] = $username;
+		$data['user_password'] = $this->b_password->bcrypt_hash($password);
+		$data['user_phone'] = $telepon;
+		$data['user_status'] = $status;
+		$data['level_id'] = $level;
 
 		// Insert users
-		$execute 					= $this->db->insert('users', $data);
-		$execute 					= $this->db->insert_id();
-
-		$data2['role_user_id'] 		= $execute;
-		$data2['role_lev_id'] 		= $level;
-
-		// Insert role users
-		$execute2 					= $this->db->insert('role_users', $data2);
+		$execute  = $this->db->insert('users', $data);
+		$execute  = $this->db->insert_id();
 
 		$exe['id'] 					= $execute;
-		$exe['level'] 				= $this->_cek('level', 'lev_id', $level, 'lev_nama');
+		$level = $this->db->select('lev_nama')->from('level')->where('lev_id', $level)->get()->row_array();
+		$level = is_null($level) ? ['lev_nama' => ''] : $level;
+		$exe['level'] = $level['lev_nama'];
 
 		return $exe;
 	}
@@ -68,24 +61,18 @@ class PenggunaModel extends Render_Model
 		$data['user_email'] 		= $username;
 		$data['user_phone'] 		= $telepon;
 		$data['user_status'] 		= $status;
+		$data['level_id'] = $level;
 		$data['updated_at'] 		= Date("Y-m-d H:i:s", time());
 		if ($password != '') {
 			$data['user_password'] 		= $this->b_password->bcrypt_hash($password);
 		}
 
 		// Update users
-		$execute 					= $this->db->where('user_id', $id);
-		$execute 					= $this->db->update('users', $data);
-
-		$data2['role_user_id'] 		= $id;
-		$data2['role_lev_id'] 		= $level;
-
-		// Update role users
-		$execute2 					= $this->db->where('role_user_id', $id);
-		$execute2 				 	= $this->db->update('role_users', $data2);
-
-		$exe['id'] 					= $id;
-		$exe['level'] 				= $this->_cek('level', 'lev_id', $level, 'lev_nama');
+		$execute = $this->db->where('user_id', $id)->update('users', $data);
+		$level = $this->db->select('lev_nama')->from('level')->where('lev_id', $level)->get()->row_array();
+		$level = is_null($level) ? ['lev_nama' => ''] : $level;
+		$exe['level'] = $level['lev_nama'];
+		$exe['id'] = $id;
 
 		return $exe;
 	}
@@ -96,11 +83,6 @@ class PenggunaModel extends Render_Model
 		// Delete users
 		$exe 						= $this->db->where('user_id', $id);
 		$exe 						= $this->db->delete('users');
-
-		// Delete role users
-		$exe2 						= $this->db->where('role_user_id', $id);
-		$exe2 						= $this->db->delete('role_users');
-
 		return $exe;
 	}
 }

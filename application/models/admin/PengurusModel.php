@@ -64,12 +64,6 @@ class PengurusModel extends Render_Model
     // Insert users
     $execute = $this->db->insert('users', $data);
     $execute = $this->db->insert_id();
-
-    $data2['role_user_id'] = $execute;
-    $data2['role_lev_id'] = $this->pengurus_level;
-
-    // Insert role users
-    $execute2 = $this->db->insert('role_users', $data2);
     return $execute;
   }
 
@@ -93,7 +87,6 @@ class PengurusModel extends Render_Model
   public function delete($id)
   {
     $user = $this->db->where('user_id', $id)->delete('users');
-    $lev = $this->db->where('role_user_id', $id)->delete('role_users');
-    return $user && $lev;
+    return $user;
   }
 }

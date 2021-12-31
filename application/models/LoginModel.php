@@ -3,66 +3,46 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class LoginModel extends Render_Model
 {
-
 	public function cekLogin($username, $password)
 	{
-		$where = array(
-			'user_email'		=> $username
-		);
+		$query = $this->db
+			->select('user_id, user_nama, user_password, user_email, b.lev_nama, b.lev_id, a.user_status')
+			->from('users a')->join('level b', 'b.lev_id = a.level_id')
+			->where('user_status <> 3')->where('user_email', $username)
+			->get();
 
-		$query = $this->query($where);
 		if ($query->num_rows() == 1) {
-
-			$cek = $this->b_password->hash_check($password, $query->row_array()['user_password']);
-
+			$query_row = $query->row();
+			$cek = $this->b_password->hash_check($password, $query_row->user_password);
 			if ($cek == true) {
-				$return['status'] = 0;
-				$return['data'] 	= $query->result_array();
+				return (object)['status' => 0, 'data' => $query_row];
 			} else {
-				$return['status'] = 1;
-				$return['data'] 	= null;
+				return  (object)['status' => 1, 'data' => null];
 			}
 		} else {
-			$return['status'] 	= 2;
-			$return['data'] 	= null;
+			return  (object)['status' => 2, 'data' => null];
 		}
-
-		return $return;
 	}
-
-	public function query($where)
-	{
-		return $this->db
-			->select('user_id,user_nama,user_password,user_email,c.lev_nama,c.lev_id, a.user_status, a.user_email_status')
-			->from('users a')
-			->join('role_users b', 'b.role_user_id = a.user_id')
-			->join('level c', 'c.lev_id = b.role_lev_id')
-			->where('user_status <> 3')
-			->where($where)
-			->get();
-	}
-
 
 	//Start: method tambahan untuk reset code
-	public function getUserInfo($id)
-	{
-		$q = $this->db
-			->select('user_id,user_nama,user_password,user_email,c.lev_nama,c.lev_id, a.user_status')
-			->from('users a')
-			->join('role_users b', 'b.role_user_id = a.user_id')
-			->join('level c', 'c.lev_id = b.role_lev_id')
-			->where('a.user_id', $id)
-			->limit(1)
-			->get();
-		if ($this->db->affected_rows() > 0) {
-			$row = $q->row();
-			return $row;
-		} else {
-			error_log('no user found getUserInfo(' . $id . ')');
-			return false;
-		}
-	}
-
+	// public function getUserInfo($id)
+	// {
+	// 	$q = $this->db
+	// 		->select('user_id,user_nama,user_password,user_email,c.lev_nama,c.lev_id, a.user_status')
+	// 		->from('users a')
+	// 		->join('role_users b', 'b.role_user_id = a.user_id')
+	// 		->join('level c', 'c.lev_id = b.role_lev_id')
+	// 		->where('a.user_id', $id)
+	// 		->limit(1)
+	// 		->get();
+	// 	if ($this->db->affected_rows() > 0) {
+	// 		$row = $q->row();
+	// 		return $row;
+	// 	} else {
+	// 		error_log('no user found getUserInfo(' . $id . ')');
+	// 		return false;
+	// 	}
+	// }
 
 	public function getUserInfoByEmail($email)
 	{
@@ -140,14 +120,11 @@ class LoginModel extends Render_Model
 		$cek = $this->db->update('users', ['user_password' => $new_password_hash]);
 		return $cek;
 	}
-	//End: method tambahan untuk reset code
 
+	//End: method tambahan untuk reset code
 	public function removeToken($id)
 	{
 		$this->db->where('user_id', $id);
 		return $this->db->delete('tokens');
 	}
 }
-
-/* End of file LoginModel.php */
-/* Location: ./application/models/LoginModel.php */

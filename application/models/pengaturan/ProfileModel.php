@@ -790,9 +790,8 @@ class ProfileModel extends Render_Model
         return $return;
     }
 
-    private function user_insert($level, $nama, $telepon, $username, $password, $status, $user_nik, $id_partner, $change_email)
+    private function user_insert($level, $nama, $telepon, $username, $password, $status, $user_nik, $id_partner)
     {
-        $data['user_email_status']             = $change_email;
         $data['user_nama']             = $nama;
         $data['user_email']         = $username;
         $data['user_password']         = $this->b_password->bcrypt_hash($password);
@@ -818,9 +817,8 @@ class ProfileModel extends Render_Model
         return $execute;
     }
 
-    private function user_update($id, $level, $nama, $telepon, $username, $password, $status, $user_nik, $id_partner, $change_email)
+    private function user_update($id, $level, $nama, $telepon, $username, $password, $status, $user_nik, $id_partner)
     {
-        $data['user_email_status']             = (string)$change_email;
         $data['user_nama']             = $nama;
         $data['user_email']         = $username;
         $data['user_phone']         = $telepon ?? '';
@@ -896,6 +894,3 @@ class ProfileModel extends Render_Model
         return $profile && $users;
     }
 }
-
-
-// membership aktif cuma satu belum
