@@ -47,12 +47,14 @@ class Login extends Render_Controller
 		// Cek login ke model
 		$login 		= $this->login->cekLogin($username, $password);
 
+		// berhasil
 		if ($login->status == 0) {
-
 			switch ($login->data->user_status) {
 				case 0: // akun di nonaktifkan
 					$this->output_json(['status' => 3]);
+					return;
 					break;
+
 				case 1: // akun aktif
 					$session = array(
 						'status' => true,
@@ -66,12 +68,16 @@ class Login extends Render_Controller
 					);
 					$this->session->set_userdata($session);
 					$this->output_json(['status' => 0]);
+					return;
 					break;
 
 				default:
 					$this->output_json(['status' => 1]);
+					return;
 			}
 		}
+		$this->output_json(['status' => $login->status]);
+		return;
 	}
 
 	public function logout()
