@@ -3,15 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class PengurusModel extends Render_Model
 {
-  private $pengurus_level = 2;
   public function getAllData($draw = null, $show = null, $start = null, $cari = null, $order = null)
   {
     // select tabel
     $this->db->select("a.user_id as id, a.npp, a.thn_angkatan, a.user_nama, a.user_email, IF(a.user_status = '0' , 'Tidak Aktif', IF(a.user_status = '1' , 'Aktif', 'Tidak Diketahui')) as status_str, a.user_status");
     $this->db->from("users a");
-    $this->db->join('role_users b', 'a.user_id = b.role_user_id');
     $this->db->where('a.user_status <>', 3);
-    $this->db->where('b.role_lev_id', $this->pengurus_level);
+    $this->db->where('a.level_id', $this->pengurus_level);
 
     // order by
     if ($order['order'] != null) {
@@ -60,6 +58,7 @@ class PengurusModel extends Render_Model
     $data['user_email'] = $email;
     $data['user_password'] = $this->b_password->bcrypt_hash($password);
     $data['user_status'] = $status;
+    $data['level_id'] = $this->pengurus_level;
 
     // Insert users
     $execute = $this->db->insert('users', $data);

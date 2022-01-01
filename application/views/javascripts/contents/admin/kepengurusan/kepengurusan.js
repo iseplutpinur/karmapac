@@ -84,7 +84,14 @@ $(function () {
                 </a>
             `;
 
+            const btn_pengurus = `
+                <button class="btn btn-dark btn-xs" onclick="Detail(this)" data-id="${data}" data-title="${full.nama}">
+                  <i class="fas fa-users"></i> Pengurus
+                </button>
+            `;
+
             let btn = (full.status == 0) ? btn_aktifkan : '';
+            btn += btn_pengurus;
             btn += btn_jabatan;
             btn += btn_lihat;
             btn += btn_ubah;
@@ -277,4 +284,68 @@ const modal_detail = (datas) => {
 const Aktifkan = (id) => {
   $("#aktifkan_id").val(id)
   $('#modal_aktifkan').modal('toggle')
+}
+
+const Detail = (datas) => {
+  const dataset = datas.dataset;
+  $('#main-content').LoadingOverlay("show");
+  $.ajax({
+    method: 'post',
+    url: '<?= base_url() ?>admin/kepengurusan/pengurus_datatable',
+    data: {
+      pengurus_jabatan_id: dataset.id
+    }
+  }).done((data) => {
+    $("#modal_pengurus_title").html(`Detail Pengurus <strong>${dataset.title}</strong>`);
+    $("#modal_pengurus").modal('toggle');
+    const table_body = $("#modal_pengurus_table_body");
+    table_body.html('');
+    const element_table = $('#modal_pengurus_table');
+    $(element_table).dataTable().fnDestroy();
+    let table_body_html = '';
+    let number = 1;
+    data.details.forEach(e => {
+      table_body_html += `
+              <tr>
+                  <td>${number++}</td>
+                  <td>${e.thn_angkatan}</td>
+                  <td>${e.user_nama}</td>
+                  <td>${e.jabatan}</td>
+              </tr>
+              `;
+    });
+    table_body.html(table_body_html);
+    renderTable(element_table);
+
+  }).fail(($xhr) => {
+    Toast.fire({
+      icon: 'error',
+      title: 'Gagal mendapatkan data.'
+    })
+  }).always(() => {
+    $('#main-content').LoadingOverlay("hide");
+  })
+}
+
+function renderTable(element_table) {
+  const tableUser = $(element_table).DataTable({
+    columnDefs: [{
+      orderable: false,
+      targets: [0]
+    }],
+    "responsive": true,
+    "lengthChange": true,
+    "autoWidth": false,
+    order: [
+      [0, 'asc']
+    ]
+  });
+  tableUser.on('draw.dt', function () {
+    var PageInfo = $(element_table).DataTable().page.info();
+    tableUser.column(0, {
+      page: 'current'
+    }).nodes().each(function (cell, i) {
+      cell.innerHTML = i + 1 + PageInfo.start;
+    });
+  });
 }

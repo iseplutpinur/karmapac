@@ -8,7 +8,6 @@ $('.summernote').summernote({
   height: (200),
 });
 $(function () {
-
   function dynamic() {
     const table_html = $('#dt_basic');
     table_html.dataTable().fnDestroy()
@@ -73,13 +72,21 @@ $(function () {
                 </button>
             `;
 
-            const btn_jabatan = `
+            const btn_pengurus = `
                 <a class="btn btn-success btn-xs" href="<?= base_url() ?>admin/jabatan/pengurus/${data}">
                   <i class="fas fa-users"></i> Pengurus
                 </a>
             `;
 
-            let btn = btn_jabatan;
+
+            const btn_pengurus_detail = `
+                <button class="btn btn-dark btn-xs" onclick="Detail(this)" data-id="${data}" data-title="${full.nama}">
+                  <i class="fas fa-list"></i> List Pengurus
+                </button>
+            `;
+
+            let btn = btn_pengurus_detail;
+            btn += btn_pengurus;
             btn += btn_lihat;
             btn += btn_ubah;
             btn += btn_hapus;
@@ -322,4 +329,67 @@ const refreshSlug = () => {
     .replace(/ +/g, '-');
 
   $("#slug").val(`${pengurus_periode}-${bidang_utama + Text}`);
+}
+const Detail = (datas) => {
+  const dataset = datas.dataset;
+  $('#main-content').LoadingOverlay("show");
+  $.ajax({
+    method: 'post',
+    url: '<?= base_url() ?>admin/jabatan/pengurus_datatable',
+    data: {
+      pengurus_jabatan_id: dataset.id,
+      length: 100
+    }
+  }).done((data) => {
+    $("#modal_pengurus_title").html(`Detail Pengurus <strong>${dataset.title}</strong>`);
+    $("#modal_pengurus").modal('toggle');
+    const table_body = $("#modal_pengurus_table_body");
+    table_body.html('');
+    const element_table = $('#modal_pengurus_table');
+    $(element_table).dataTable().fnDestroy();
+    let table_body_html = '';
+    let number = 1;
+    data.data.forEach(e => {
+      table_body_html += `
+              <tr>
+                  <td>${number++}</td>
+                  <td>${e.thn_angkatan}</td>
+                  <td>${e.user_nama}</td>
+              </tr>
+              `;
+    });
+    table_body.html(table_body_html);
+    renderTable(element_table);
+
+  }).fail(($xhr) => {
+    Toast.fire({
+      icon: 'error',
+      title: 'Gagal mendapatkan data.'
+    })
+  }).always(() => {
+    $('#main-content').LoadingOverlay("hide");
+  })
+}
+
+function renderTable(element_table) {
+  const tableUser = $(element_table).DataTable({
+    columnDefs: [{
+      orderable: false,
+      targets: [0]
+    }],
+    "responsive": true,
+    "lengthChange": true,
+    "autoWidth": false,
+    order: [
+      [0, 'asc']
+    ]
+  });
+  tableUser.on('draw.dt', function () {
+    var PageInfo = $(element_table).DataTable().page.info();
+    tableUser.column(0, {
+      page: 'current'
+    }).nodes().each(function (cell, i) {
+      cell.innerHTML = i + 1 + PageInfo.start;
+    });
+  });
 }

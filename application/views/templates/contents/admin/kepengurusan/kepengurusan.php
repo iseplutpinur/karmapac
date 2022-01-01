@@ -148,3 +148,31 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="modal_pengurus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header outline-info">
+        <h5 class="modal-title text-center" id="modal_pengurus_title">Pengurus Detail</h5>
+      </div>
+      <div class="modal-body">
+        <table id="modal_pengurus_table" class="table table-bordered table-striped table-hover" style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="max-width: 5px;">No</th>
+              <th style="max-width: 10px;">Angkatan</th>
+              <th>Nama</th>
+              <th>Jabatan</th>
+            </tr>
+          </thead>
+          <tbody id="modal_pengurus_table_body">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success btn-ef btn-ef-3 btn-ef-3c" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Kembali</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -148,27 +148,14 @@ class Jabatan extends Render_Controller
         $this->output_json(["data" => $result], $code);
     }
 
-    public function cari()
-    {
-        $key = $this->input->post('q');
-        // jika inputan ada
-        if ($key) {
-            $this->output_json([
-                "results" => $this->model->cari($key)
-            ]);
-        } else {
-            $this->output_json([
-                "results" => []
-            ]);
-        }
-    }
-
+    // pengurus per jabatan
+    // =================================================================================================================
     public function pengurus($jabatan_id = null)
     {
         // Page Settings
         $this->title = 'Pengurus Jabatan';
         $this->navigation = ['Kepengurusan'];
-        $this->plugins = ['datatables'];
+        $this->plugins = ['datatables', 'select2'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Dashboard';
@@ -188,6 +175,64 @@ class Jabatan extends Render_Controller
         $this->content      = 'admin/kepengurusan/pengurus_jabatan';
         // Send data to view
         $this->render();
+    }
+
+    public function pengurus_insert()
+    {
+        $user_id = $this->input->post('user_id');
+        $pengurus_jabatan_id = $this->input->post('pengurus_jabatan_id');
+        $by = $this->id;
+        $result =  $this->model->pengurus_insert($user_id, $pengurus_jabatan_id, $by);
+        $this->output_json(["results" => $result]);
+    }
+
+    public function pengurus_delete()
+    {
+        $id = $this->input->post('id');
+        $result =  $this->model->pengurus_delete($id);
+        $this->output_json(["results" => $result]);
+    }
+
+    public function pengurus_cari()
+    {
+        $key = $this->input->post('q');
+        // jika inputan ada
+        if ($key) {
+            $this->output_json([
+                "results" => $this->model->pengurus_cari($key)
+            ]);
+        } else {
+            $this->output_json([
+                "results" => []
+            ]);
+        }
+    }
+
+    public function pengurus_datatable()
+    {
+        $order = ['order' => $this->input->post('order'), 'columns' => $this->input->post('columns')];
+        $start = $this->input->post('start');
+        $draw = $this->input->post('draw');
+        $draw = $draw == null ? 1 : $draw;
+        $length = $this->input->post('length');
+        $cari = $this->input->post('search');
+        $filter = null;
+        $pengurus_jabatan_id = $this->input->post('pengurus_jabatan_id');
+        if ($pengurus_jabatan_id) {
+            $filter = [
+                'jabatan' => $pengurus_jabatan_id
+            ];
+        }
+        if (isset($cari['value'])) {
+            $_cari = $cari['value'];
+        } else {
+            $_cari = null;
+        }
+
+        $data = $this->model->pengurus_datatable($draw, $length, $start, $_cari, $order,  $filter)->result_array();
+        $count = $this->model->pengurus_datatable(null, null,    null,   $_cari, $order,  $filter)->num_rows();
+
+        $this->output_json(['recordsTotal' => $count, 'recordsFiltered' => $count, 'draw' => $draw, 'search' => $_cari, 'data' => $data]);
     }
 
     function __construct()

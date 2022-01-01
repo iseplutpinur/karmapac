@@ -3,7 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Kepengurusan extends Render_Controller
 {
-
     public function index()
     {
         // Page Settings
@@ -135,6 +134,33 @@ class Kepengurusan extends Render_Controller
         $id = $this->input->post("id");
         $result = $this->model->activate($this->id, $id);
         $this->output_json(["data" => $result], 200);
+    }
+    public function pengurus_datatable()
+    {
+        $order = ['order' => $this->input->post('order'), 'columns' => $this->input->post('columns')];
+        $start = $this->input->post('start');
+        $draw = $this->input->post('draw');
+        $draw = $draw == null ? 1 : $draw;
+        $length = $this->input->post('length');
+        $cari = $this->input->post('search');
+        $filter = null;
+        $pengurus_periode_id = $this->input->post('pengurus_periode_id');
+        if ($pengurus_periode_id) {
+            $filter = [
+                'periode' => $pengurus_periode_id
+            ];
+        }
+        if (isset($cari['value'])) {
+            $_cari = $cari['value'];
+        } else {
+            $_cari = null;
+        }
+
+        $data = $this->model->pengurus_datatable($draw, $length, $start, $_cari, $order,  $filter)->result_array();
+        // $count = $this->model->pengurus_datatable(null, null,    null,   $_cari, $order,  $filter)->num_rows();
+
+        // $this->output_json(['recordsTotal' => $count, 'recordsFiltered' => $count, 'draw' => $draw, 'search' => $_cari, 'data' => $data]);
+        $this->output_json(['details' => $data]);
     }
 
     function __construct()

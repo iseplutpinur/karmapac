@@ -42,7 +42,14 @@ $(function () {
                   <i class="fa fa-trash"></i> Hapus
                 </button>
             `;
-            let btn = btn_ubah;
+
+            const btn_detail = `
+                <button class="btn btn-secondary btn-xs">
+                  <i class="fa fa-user"></i> Detail
+                </button>
+            `;
+            let btn = btn_detail;
+            btn += btn_ubah;
             btn += btn_hapus;
             return `<div class="pull-right">${btn}</div>`
           }, className: "nowrap"

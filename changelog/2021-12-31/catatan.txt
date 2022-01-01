@@ -1,1 +1,11 @@
 Ubah multilevel menjadi single level
+Target hari ini 2022-01-01 bismilah
+Data Header Pengurus [clear]
+Input Pengurus Ke jabatan kepengurusan[clear]
+jabatan list pengurus modal[clear]
+Atribut artikel
+  - kategori
+  - tag
+  - dll
+Artikel utama
+integrasi ke frontend
