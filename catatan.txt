@@ -2,10 +2,10 @@
   jabatan mempunyai slug dan nomor urut [lear]
 
 
-Fitur kontak belum database dan view nya
-fitur pendaftaran belum
-fitur download
-fitur medsos dari footer
+halaman kontak belum database dan view nya
+halaman pendaftaran belum
+halaman download
+halaman medsos dari footer
 
 custom image, description, SEO
 sejarah
@@ -62,14 +62,7 @@ Artikel
 Galeri Kegiatan
 Pendaftaran Acara2 di organisasi (forms)
 Download
-
 Peta aplikasi admin
-
-jabatan
-  list Periode
-    crud jabatan
-
-Periode
 
 
 
@@ -97,3 +90,14 @@ header
 pengurus
 visi misi
 blog
+
+
+Konsep
+Media Informasi (Pengumuman seputar internal maupun eksternal)
+Tracking kepengurusan dari periode ke periode
+Blog Artikel
+Pendaftaran (Sebagai media pendaftaran untuk kegiatan apapun/pengganti google forms)
+Sensus Keanggotaan (Bisa untuk melihat ulang tahun/ mencari saudara se daerah/ dan lain lain).
+
+
+

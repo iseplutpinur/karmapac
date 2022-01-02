@@ -147,12 +147,10 @@
           <div class="col-4 d-none d-md-block d-lg-block">
             <!-- social icons -->
             <ul class="social-icons list-unstyled list-inline mb-0">
-              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+              <?php endforeach; ?>
+
             </ul>
           </div>
 
@@ -405,12 +403,9 @@
                       <div class="social-share me-auto">
                         <button class="toggle-button icon-share"></button>
                         <ul class="icons list-unstyled list-inline mb-0">
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                          <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                            <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                          <?php endforeach; ?>
                         </ul>
                       </div>
                       <div class="more-button float-end">
@@ -448,12 +443,9 @@
                       <div class="social-share me-auto">
                         <button class="toggle-button icon-share"></button>
                         <ul class="icons list-unstyled list-inline mb-0">
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                          <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                            <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                          <?php endforeach; ?>
                         </ul>
                       </div>
                       <div class="more-button float-end">
@@ -488,12 +480,9 @@
                       <div class="social-share me-auto">
                         <button class="toggle-button icon-share"></button>
                         <ul class="icons list-unstyled list-inline mb-0">
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                          <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                            <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                          <?php endforeach; ?>
                         </ul>
                       </div>
                       <div class="more-button float-end">
@@ -533,12 +522,9 @@
                       <div class="social-share me-auto">
                         <button class="toggle-button icon-share"></button>
                         <ul class="icons list-unstyled list-inline mb-0">
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                          <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                            <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                          <?php endforeach; ?>
                         </ul>
                       </div>
                       <div class="more-button float-end">
@@ -575,12 +561,9 @@
                       <div class="social-share me-auto">
                         <button class="toggle-button icon-share"></button>
                         <ul class="icons list-unstyled list-inline mb-0">
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                          <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                            <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                          <?php endforeach; ?>
                         </ul>
                       </div>
                       <div class="more-button float-end">
@@ -612,12 +595,9 @@
                     cianjur pakidulan.
                     </p>
                     <ul class="social-icons list-unstyled list-inline mb-0">
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                      <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                        <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                      <?php endforeach; ?>
                     </ul>
                   </div>
                 </div>
@@ -700,12 +680,9 @@
             <!-- social icons -->
             <div class="col-md-4 text-center">
               <ul class="social-icons list-unstyled list-inline mb-0">
-                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <?php foreach ($front['sosmed'] as $sosmed) : ?>
+                  <li class="list-inline-item"><a href="<?= $sosmed['link'] ?>" title="<?= $sosmed['name'] ?>"><i class="<?= $sosmed['icon'] ?>"></i></a></li>
+                <?php endforeach; ?>
               </ul>
             </div>
 

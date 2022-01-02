@@ -141,16 +141,16 @@ class Render_Controller extends CI_Controller
 
 		// frontend
 		if ($this->navigation_type == 'front') {
-			// list sosmed
+			// // list list item
 			$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-			if (!$list_item = $this->cache->get($this->cache_list_item)) {
-				$list_item = $this->db->select('link, name')
-					->from('home_footer_list')->where('status', 1)
-					->get()->result_array();
-				$this->cache->save($this->cache_list_item, $list_item);
-			}
+			// if (!$list_item = $this->cache->get($this->cache_list_item)) {
+			// 	$list_item = $this->db->select('link, name')
+			// 		->from('home_footer_list')->where('status', 1)
+			// 		->get()->result_array();
+			// 	$this->cache->save($this->cache_list_item, $list_item);
+			// }
 
-			// list item
+			// list sosmed
 			if (!$sosmed = $this->cache->get($this->cache_sosmed)) {
 				$sosmed = $this->db->select('icon, link, name')
 					->from('home_sosmed')->where('status', 1)
@@ -159,12 +159,12 @@ class Render_Controller extends CI_Controller
 			}
 
 			$data['front'] = [
-				'logo' => $this->key_get($this->key_logo),
-				'list_head' => $this->key_get($this->key_footer_list_head),
-				'contact' => $this->key_get($this->key_footer_contact),
-				'copyright' => $this->key_get($this->key_footer_copyright),
-				'description' => $this->key_get($this->key_footer_descritpion),
-				'list_item' => $list_item,
+				// 'logo' => $this->key_get($this->key_logo),
+				// 'list_head' => $this->key_get($this->key_footer_list_head),
+				// 'contact' => $this->key_get($this->key_footer_contact),
+				// 'copyright' => $this->key_get($this->key_footer_copyright),
+				// 'description' => $this->key_get($this->key_footer_descritpion),
+				// 'list_item' => $list_item,
 				'sosmed' => $sosmed,
 			];
 		}
@@ -236,14 +236,22 @@ class Render_Controller extends CI_Controller
 				</li>
 			';
 		}
-		$result = $menu_header . $menu_body . $button_logout . $menu_footer;
+		$result = $menu_header . $menu_body . $button_logout .  $menu_footer;
 		return $result;
 	}
 
 	private function navigationToArray($menu)
 	{
 		$main_menu = [];
-		foreach ($menu as $nav) {
+		$change_password = [
+			'menu_id' => null,
+			'menu_menu_id' => "0",
+			'menu_nama' => "Ganti Password",
+			'menu_icon' => "fa fa-key",
+			'menu_url' => "pengaturan/password",
+		];
+
+		foreach (array_merge($menu, [$change_password]) as $nav) {
 			$main_menu_active = in_array($nav['menu_nama'], $this->navigation);
 			$sub_menu_list = $this->default->sub_menu($nav['menu_id']);
 			$sub_menu_in_active = false;
