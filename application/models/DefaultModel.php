@@ -24,6 +24,9 @@ class DefaultModel extends Render_Model
 
 	public function sub_menu($menu_id = null)
 	{
+		if (is_null($this->session->userdata('data'))) {
+			return null;
+		}
 		$session_level_id = $this->session->userdata('data')['level_id'];
 
 		$query = $this->db->select('*')

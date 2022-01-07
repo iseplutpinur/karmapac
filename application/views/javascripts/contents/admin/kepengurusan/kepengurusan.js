@@ -293,7 +293,7 @@ const Detail = (datas) => {
     method: 'post',
     url: '<?= base_url() ?>admin/kepengurusan/pengurus_datatable',
     data: {
-      pengurus_jabatan_id: dataset.id
+      pengurus_periode_id: dataset.id
     }
   }).done((data) => {
     $("#modal_pengurus_title").html(`Detail Pengurus <strong>${dataset.title}</strong>`);

@@ -157,9 +157,6 @@ class Kepengurusan extends Render_Controller
         }
 
         $data = $this->model->pengurus_datatable($draw, $length, $start, $_cari, $order,  $filter)->result_array();
-        // $count = $this->model->pengurus_datatable(null, null,    null,   $_cari, $order,  $filter)->num_rows();
-
-        // $this->output_json(['recordsTotal' => $count, 'recordsFiltered' => $count, 'draw' => $draw, 'search' => $_cari, 'data' => $data]);
         $this->output_json(['details' => $data]);
     }
 

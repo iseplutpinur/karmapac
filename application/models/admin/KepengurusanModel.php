@@ -125,9 +125,6 @@ class KepengurusanModel extends Render_Model
     {
         // select tabel
         $periode = isset($filter['periode']) ? $filter['periode'] : '0';
-        // var_dump($periode);
-        // die;
-
         $query_get_sub_jabatan = "SELECT nama FROM pengurus_jabatan as y where y.id = z.parrent_id";
 
         $query_get_jabatan = "SELECT concat(z.nama,
