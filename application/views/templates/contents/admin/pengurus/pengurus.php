@@ -10,10 +10,10 @@
       <thead>
         <tr>
           <th>No</th>
-          <th>NPP</th>
-          <th>Angkatan</th>
           <th>Nama</th>
           <th>Email</th>
+          <th>NPP</th>
+          <th>Angkatan</th>
           <th>Status</th>
           <th>Aksi</th>
         </tr>

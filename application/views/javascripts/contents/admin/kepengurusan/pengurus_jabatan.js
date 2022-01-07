@@ -39,7 +39,7 @@ $(function () {
             return `<button class="btn btn-danger btn-xs" onclick="Hapus(${data})">
               <i class="fa fa-trash"></i> Hapus
             </button>`;
-          }, className: "nowrap"
+          }
         }
       ],
       columnDefs: [{

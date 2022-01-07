@@ -49,7 +49,7 @@ $(function () {
                       data-target="#modal_detail"
                       onclick="modal_detail(this)"
                       id="btn-gambar"><i class="fas fa-eye"></i></button>`
-          }, className: "nowrap"
+          }
         },
         { "data": "status_str" },
         {

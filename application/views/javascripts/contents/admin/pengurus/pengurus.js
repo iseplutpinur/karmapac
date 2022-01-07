@@ -16,10 +16,10 @@ $(function () {
       "autoWidth": false,
       "columns": [
         { "data": null },
-        { "data": 'npp' },
-        { "data": 'thn_angkatan' },
         { "data": "user_nama" },
         { "data": "user_email" },
+        { "data": 'npp' },
+        { "data": 'thn_angkatan' },
         { "data": "status_str" },
         {
           "data": "id", render(data, type, full, meta) {
@@ -52,7 +52,7 @@ $(function () {
             btn += btn_ubah;
             btn += btn_hapus;
             return `<div class="pull-right">${btn}</div>`
-          }, className: "nowrap"
+          }
         }
       ],
       columnDefs: [{

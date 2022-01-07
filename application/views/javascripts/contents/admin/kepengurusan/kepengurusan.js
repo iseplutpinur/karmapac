@@ -38,7 +38,7 @@ $(function () {
                       data-target="#modal_detail"
                       onclick="modal_detail(this)"
                       id="btn-gambar"><i class="fas fa-eye"></i></button>`
-          }, className: "nowrap"
+          }
         },
         {
           "data": "foto", render(data, type, full, meta) {
@@ -49,7 +49,7 @@ $(function () {
                       data-target="#gambar_modal"
                       onclick="view_gambar(this)"
                       id="btn-gambar"><i class="fas fa-eye"></i></button>`
-          }, className: "nowrap"
+          }
         },
         { "data": "status_str" },
         {
@@ -98,7 +98,7 @@ $(function () {
             btn += (full.status == 0) ? btn_hapus : '';
 
             return `<div class="pull-right">${btn}</div>`
-          }, className: "nowrap"
+          }
         }
       ],
       order: [
