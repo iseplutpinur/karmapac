@@ -2,8 +2,8 @@ frontend
   foto bg visi misi
 
 Atribut artikel
-  - kategori [clear]
-  - tag [clear]
+  - kategori
+  - tag
   - dll
-Artikel utama [clear]
+Artikel utama
 integrasi ke frontend
