@@ -66,9 +66,11 @@ $(function () {
       ],
       columnDefs: [{
         orderable: false,
-        targets: [0, 6]
+        targets: [0, 8]
       }],
-
+      order: [
+        [5, 'desc']
+      ],
     });
     new_table.on('draw.dt', function () {
       var PageInfo = table_html.DataTable().page.info();

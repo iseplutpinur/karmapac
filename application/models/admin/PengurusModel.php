@@ -29,6 +29,8 @@ class PengurusModel extends Render_Model
 
       $order_colum = $columns['data'];
       $this->db->order_by($order_colum, $dir);
+    } else {
+      $this->db->order_by('ulang_tahun', 'asc');
     }
 
     // initial data table
