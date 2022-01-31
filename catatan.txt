@@ -99,5 +99,5 @@ Blog Artikel
 Pendaftaran (Sebagai media pendaftaran untuk kegiatan apapun/pengganti google forms)
 Sensus Keanggotaan (Bisa untuk melihat ulang tahun/ mencari saudara se daerah/ dan lain lain).
 
-
-
+// google drive embed
+<iframe src="https://drive.google.com/embeddedfolderview?id=1P-CJPC7H1Tkd5KfLnSj580Rcmtp5cKpA#grid" style="width:100%; height:600px; border:0;"></iframe>

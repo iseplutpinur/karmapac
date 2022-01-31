@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jan 08, 2022 at 03:40 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.4.21
+-- Host: 127.0.0.1
+-- Generation Time: Jan 31, 2022 at 08:41 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -6604,8 +6604,32 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id`, `nama`, `slug`, `excerpt`, `foto`, `detail`, `status`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, 'sdafsdf', 'sdafsdf', 'asdfasdf', '2022-01-08_09-02-48_karmapack_image_Screenshot_2022-01-07_235501.png', '<p>sadfdasf</p>', 2, 1, 1, NULL, '2022-01-08 07:55:00', '2022-01-08 09:02:48', NULL),
-(5, NULL, '', '', NULL, NULL, 0, 1, NULL, NULL, '2022-01-08 09:24:40', NULL, NULL);
+(5, 'Hari Ayah Nasional', 'hari-ayah-nasional', 'Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional', '2022-01-26_08-40-46_karmapack_image_insta-1.jpg', '<p><span xss=removed>Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional</span><br></p>', 2, 1, 1, NULL, '2022-01-08 09:24:40', '2022-01-26 08:42:37', NULL),
+(6, 'HARI GERAKAN NASIONAL MEMBACA', 'hari-gerakan-nasional-membaca', 'Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨', '2022-01-26_08-41-16_karmapack_image_insta-2.jpg', '<p><span xss=removed>Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:40:46', '2022-01-26 08:41:16', NULL),
+(7, 'Menuntut Ilmu', 'menuntut-ilmu', 'Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)', '2022-01-26_08-41-46_karmapack_image_insta-4.jpg', '<p><span xss=removed>Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:16', '2022-01-26 08:41:46', NULL),
+(8, 'Membaca adalah senjata', 'membaca-adalah-senjata', 'Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!', '2022-01-26_08-42-10_karmapack_image_insta-6.jpg', '<p><span xss=removed>Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:46', '2022-01-26 08:42:42', NULL),
+(9, NULL, '', '', NULL, NULL, 0, 1, NULL, NULL, '2022-01-26 08:42:11', NULL, NULL),
+(10, 'Hari Ayah Nasional', 'hari-ayah-nasional', 'Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional', '2022-01-26_08-40-46_karmapack_image_insta-1.jpg', '<p><span xss=removed>Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional</span><br></p>', 2, 1, 1, NULL, '2022-01-08 09:24:40', '2022-01-26 08:42:37', NULL),
+(11, 'HARI GERAKAN NASIONAL MEMBACA', 'hari-gerakan-nasional-membaca', 'Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨', '2022-01-26_08-41-16_karmapack_image_insta-2.jpg', '<p><span xss=removed>Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:40:46', '2022-01-26 08:41:16', NULL),
+(12, 'Menuntut Ilmu', 'menuntut-ilmu', 'Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)', '2022-01-26_08-41-46_karmapack_image_insta-4.jpg', '<p><span xss=removed>Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:16', '2022-01-26 08:41:46', NULL),
+(13, 'Membaca adalah senjata', 'membaca-adalah-senjata', 'Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!', '2022-01-26_08-42-10_karmapack_image_insta-6.jpg', '<p><span xss=removed>Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:46', '2022-01-26 08:42:42', NULL),
+(14, 'Hari Ayah Nasional', 'hari-ayah-nasional', 'Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional', '2022-01-26_08-40-46_karmapack_image_insta-1.jpg', '<p><span xss=removed>Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional</span><br></p>', 2, 1, 1, NULL, '2022-01-08 09:24:40', '2022-01-26 08:42:37', NULL),
+(15, 'HARI GERAKAN NASIONAL MEMBACA', 'hari-gerakan-nasional-membaca', 'Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨', '2022-01-26_08-41-16_karmapack_image_insta-2.jpg', '<p><span xss=removed>Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:40:46', '2022-01-26 08:41:16', NULL),
+(16, 'Menuntut Ilmu', 'menuntut-ilmu', 'Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)', '2022-01-26_08-41-46_karmapack_image_insta-4.jpg', '<p><span xss=removed>Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:16', '2022-01-26 08:41:46', NULL),
+(17, 'Membaca adalah senjata', 'membaca-adalah-senjata', 'Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!', '2022-01-26_08-42-10_karmapack_image_insta-6.jpg', '<p><span xss=removed>Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:46', '2022-01-26 08:42:42', NULL),
+(18, NULL, '', '', NULL, NULL, 0, 1, NULL, NULL, '2022-01-26 08:42:11', NULL, NULL),
+(19, 'Hari Ayah Nasional', 'hari-ayah-nasional', 'Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional', '2022-01-26_08-40-46_karmapack_image_insta-1.jpg', '<p><span xss=removed>Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional</span><br></p>', 2, 1, 1, NULL, '2022-01-08 09:24:40', '2022-01-26 08:42:37', NULL),
+(20, 'HARI GERAKAN NASIONAL MEMBACA', 'hari-gerakan-nasional-membaca', 'Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨', '2022-01-26_08-41-16_karmapack_image_insta-2.jpg', '<p><span xss=removed>Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:40:46', '2022-01-26 08:41:16', NULL),
+(21, 'Menuntut Ilmu', 'menuntut-ilmu', 'Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)', '2022-01-26_08-41-46_karmapack_image_insta-4.jpg', '<p><span xss=removed>Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:16', '2022-01-26 08:41:46', NULL),
+(22, 'Membaca adalah senjata', 'membaca-adalah-senjata', 'Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!', '2022-01-26_08-42-10_karmapack_image_insta-6.jpg', '<p><span xss=removed>Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:46', '2022-01-26 08:42:42', NULL),
+(23, 'Hari Ayah Nasional', 'hari-ayah-nasional', 'Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional', '2022-01-26_08-40-46_karmapack_image_insta-1.jpg', '<p><span xss=removed>Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional</span><br></p>', 2, 1, 1, NULL, '2022-01-08 09:24:40', '2022-01-26 08:42:37', NULL),
+(24, 'HARI GERAKAN NASIONAL MEMBACA', 'hari-gerakan-nasional-membaca', 'Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨', '2022-01-26_08-41-16_karmapack_image_insta-2.jpg', '<p><span xss=removed>Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:40:46', '2022-01-26 08:41:16', NULL),
+(25, 'Menuntut Ilmu', 'menuntut-ilmu', 'Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)', '2022-01-26_08-41-46_karmapack_image_insta-4.jpg', '<p><span xss=removed>Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:16', '2022-01-26 08:41:46', NULL),
+(26, 'Membaca adalah senjata', 'membaca-adalah-senjata', 'Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!', '2022-01-26_08-42-10_karmapack_image_insta-6.jpg', '<p><span xss=removed>Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:46', '2022-01-26 08:42:42', NULL),
+(27, 'Hari Ayah Nasional', 'hari-ayah-nasional', 'Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional', '2022-01-26_08-40-46_karmapack_image_insta-1.jpg', '<p><span xss=removed>Tangan yang selalu sigap menggenggam, bahu yang siap sedia menopang, dan mata yang selalu menyorotkan kasih sayang, \"Ayah\". Terimakasih selalu menjadi tameng bagi putra putri-Mu. Selamat Hari Ayah Nasional</span><br></p>', 2, 1, 1, NULL, '2022-01-08 09:24:40', '2022-01-26 08:42:37', NULL),
+(28, 'HARI GERAKAN NASIONAL MEMBACA', 'hari-gerakan-nasional-membaca', 'Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨', '2022-01-26_08-41-16_karmapack_image_insta-2.jpg', '<p><span xss=removed>Makin aku banyak membaca, makin aku banyak berfikir, makin banyak aku belajar, makin aku sadar bahwa aku tak mengetahui apapun. -Voltaire- Selamat Hari Gerakan Nasional Membaca✨</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:40:46', '2022-01-26 08:41:16', NULL),
+(29, 'Menuntut Ilmu', 'menuntut-ilmu', 'Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)', '2022-01-26_08-41-46_karmapack_image_insta-4.jpg', '<p><span xss=removed>Artinya : _“Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.”_ (HR. Muslim, no. 2699)</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:16', '2022-01-26 08:41:46', NULL),
+(30, 'Membaca adalah senjata', 'membaca-adalah-senjata', 'Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!', '2022-01-26_08-42-10_karmapack_image_insta-6.jpg', '<p><span xss=removed>Buku yang dibaca adalah senjata bagi perempuan dari pembodohan, penindasan dan perlakuan tidak adil. Buka bukumu sekarang juga, niscaya dunia akan terlihat jelas!</span><br></p>', 2, 1, 1, NULL, '2022-01-26 08:41:46', '2022-01-26 08:42:42', NULL);
 
 -- --------------------------------------------------------
 
@@ -6645,7 +6669,10 @@ INSERT INTO `artikel_kategori` (`id`, `nama`, `slug`, `foto`, `keterangan`, `sta
 (10, 'Olahraga', 'olahraga', '', '', 1, 1, NULL, NULL, '2022-01-08 07:08:36', NULL, NULL),
 (11, 'Politik', 'politik', '', '', 1, 1, NULL, NULL, '2022-01-08 07:08:41', NULL, NULL),
 (12, 'Teknologi', 'teknologi', '', '', 1, 1, NULL, NULL, '2022-01-08 07:08:48', NULL, NULL),
-(13, 'Wisata', 'wisata', '', '', 1, 1, NULL, NULL, '2022-01-08 07:08:52', NULL, NULL);
+(13, 'Wisata', 'wisata', '', '', 1, 1, NULL, NULL, '2022-01-08 07:08:52', NULL, NULL),
+(14, 'Hari Besar Nasional', 'hari-besar-nasional', '', '', 1, 1, NULL, NULL, '2022-01-26 08:38:42', NULL, NULL),
+(15, 'Akhlakul Kharimah', 'akhlakul-kharimah', '', '', 1, 1, NULL, NULL, '2022-01-26 08:38:58', NULL, NULL),
+(16, 'Berita Dan Informasi', 'berita-dan-informasi', '', '', 1, 1, NULL, NULL, '2022-01-26 08:39:11', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -6670,7 +6697,10 @@ CREATE TABLE `artikel_kategori_detail` (
 --
 
 INSERT INTO `artikel_kategori_detail` (`id`, `artikel_id`, `artikel_kategori_id`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(27, 3, 1, 1, NULL, NULL, '2022-01-08 09:02:48', NULL, NULL);
+(30, 6, 14, 1, NULL, NULL, '2022-01-26 08:41:16', NULL, NULL),
+(31, 7, 15, 1, NULL, NULL, '2022-01-26 08:41:46', NULL, NULL),
+(34, 8, 15, 1, NULL, NULL, '2022-01-26 08:42:42', NULL, NULL),
+(35, 5, 14, 1, NULL, NULL, '2022-01-31 10:39:37', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -6718,13 +6748,6 @@ CREATE TABLE `artikel_tag_detail` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `artikel_tag_detail`
---
-
-INSERT INTO `artikel_tag_detail` (`id`, `artikel_id`, `artikel_tag_id`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(10, 3, 1, 1, NULL, NULL, '2022-01-08 09:02:48', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -6743,24 +6766,24 @@ CREATE TABLE `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('1g6j58q1b5hd5d4mstg25ri1q3urlodu', '::1', 1641608489, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630383438393b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('21pkarfah0q1adk3ccvtc7192ril9re6', '::1', 1641609460, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630393436303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('3f38aovmqv609jguohhhc4tjrc5gh6j9', '::1', 1641601089, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630313038393b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('5boia65a20abbs7aramfood1r58s2deh', '::1', 1641602888, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630323838383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('622ftjdauesdt37dlvv23mubdeb4k9mf', '::1', 1641601431, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630313433313b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('69tul0u40rm0jd9msscgiihuaauu5knc', '::1', 1641606992, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630363939323b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('9cin1i2erf74cnb7r773hm4694gai76u', '::1', 1641607296, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630373239363b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('9oojnm3gp1kup9lmupu0hmagf4786ci1', '::1', 1641605220, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630353232303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('b1krk2ttcmabkcrs5ahsmtucjo8705lf', '::1', 1641600761, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630303736313b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('jobcsjge8k6er4296rvubp5huebko6bt', '::1', 1641604007, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630343030373b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('kjn1suhajb053fqcl0qmnjv0oepnirk6', '::1', 1641603658, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630333635383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('kopdgbjlpau25po901ls7ct2jko6cmrq', '::1', 1641609094, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630393039343b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('kp547pgibntf415sei9uu71o35u783h1', '::1', 1641605746, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630353734363b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('m5d2onctnla1gtf13pm3d917en8e4bbh', '::1', 1641609576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630393436303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('rpftkmei9bio3hnq3b03bkplmmd1por6', '::1', 1641606447, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630363434373b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('t7d93r777p6totv1iriam4mg50n8nkub', '::1', 1641603202, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630333230323b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('tm82b234ddiabksg9c4rhjpak2ft1i9p', '::1', 1641608793, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630383739333b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
-('vsg08tphark60uq8f3hi3pf33q6nuh1k', '::1', 1641600428, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634313630303432383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d);
+('15fbnhf6ott3tf8j2ufglmsndie9mlkk', '::1', 1643602107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630323130373b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('337vpgm69mapeb1uge2aq5isoobbgqce', '::1', 1643604578, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630343537333b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('3s57a9uj0ar8t9c7mg965e77dj7j1vjs', '::1', 1643613448, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333631333434383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('6b0qc13521jhh0qh3k0da2q1fkdlipfq', '::1', 1643614717, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333631343637313b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('6dnor13dim52bsugeiiutk0vsktvth21', '::1', 1643601463, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630313436333b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('7rgs4tb9stnjimd2le63evfuvburpsv7', '::1', 1643601806, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630313830363b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('9u8dpt91dinpjlg14jscab6nh57gp7r1', '::1', 1643600835, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630303833353b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('doo0rn0vvi73h79e579is95rjtr60mu4', '::1', 1643601140, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630313134303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('dsj6dtbvpmpkfrk208ftthqjrr3ssvvd', '::1', 1643614671, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333631343637313b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('gcak2qvj6r22romhjtt13v7iosc3q8te', '::1', 1643612980, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333631323938303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('k00qebposn5n42e29j1d1o6s0eofbl9v', '::1', 1643602755, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630323735353b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('lnnc652cpbqij99vb5ggqt9b05v32215', '::1', 1643603200, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630333230303b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('nrn1mb800socte9lgfkn1cjkn26j7f0q', '::1', 1643612578, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333631323537383b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('obvr9s45nnq078ss5u33mjmmdlfkf0ap', '::1', 1643604573, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630343537333b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('ofrtvfkarmkcnf4455gbtct2fdg1lus9', '::1', 1643614034, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333631343033343b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('qh46ifm5jrgg5rh07nb59c2cjn7319f9', '::1', 1643603695, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630333639353b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('seocq13bqkserhbbpupf66lcamgfo2io', '::1', 1643602416, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630323431363b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d),
+('vpiccoogbj65c7qkjngctub2mdmdpqbi', '::1', 1643600356, 0x5f5f63695f6c6173745f726567656e65726174657c693a313634333630303335363b7374617475737c623a313b646174617c613a353a7b733a323a226964223b733a313a2231223b733a343a226e616d61223b733a31333a2241646d696e6973747261746f72223b733a353a22656d61696c223b733a32333a2261646d696e6973747261746f7240676d61696c2e636f6d223b733a353a226c6576656c223b733a31313a2253757065722041646d696e223b733a383a226c6576656c5f6964223b733a313a2231223b7d);
 
 -- --------------------------------------------------------
 
@@ -7038,13 +7061,14 @@ INSERT INTO `key_value` (`key`, `value1`, `value2`, `created_by`, `updated_by`, 
 ('footer_copyright', 'Copyright © ${(new Date().getFullYear())} Toko Bunga Ucapan Bandung', NULL, NULL, NULL, NULL, '2021-11-19 17:52:48', '2021-11-19 18:46:33', NULL),
 ('footer_descritpion', 'Kami menyediakan berbagai macam rangkaian bunga dengan design yang modern yang tentunya bisa anda lakukan costum baik ukuran atau jenis bunga', NULL, NULL, NULL, NULL, '2021-11-19 15:22:55', '2021-11-19 18:17:33', NULL),
 ('footer_list_head', 'Menyediakan', NULL, NULL, NULL, NULL, '2021-11-19 17:52:48', '2021-11-19 18:52:33', NULL),
-('logo', '6fbe94da589c94255915300bf665782c.png', '4707ee8ba9fff6de51d74efbe5a35ee7.png', NULL, NULL, NULL, '2021-11-19 15:15:03', '2021-11-19 15:41:06', NULL),
+('logo', '2022-01-30_01-23-04_karmapack_image_android-chrome-256x256.png', NULL, NULL, 1, NULL, '2021-11-19 15:15:03', '2022-01-30 13:23:04', NULL),
 ('offer', 'Terlengkap Dan Terjangkau', 'Toko Bunga Ucapan Bandung', NULL, NULL, NULL, '2021-11-17 21:17:10', '2021-11-17 21:55:55', NULL),
 ('offer2', 'Terbaik Dan Terpercaya', 'TUNGGU APA LAGI', NULL, NULL, NULL, '2021-11-17 22:03:28', '2021-11-17 22:06:50', NULL),
 ('offer_decritpion', '<p><span class=\"fw-bold\">Toko Bunga Ucapan Bandung</span> merupakan salah satu toko bunga\r\n              terbaik di <span class=\"fw-bold\">Kota Bandung</span> dengan produk kami berbagai macam\r\n              karangan bunga dan rangkaian bunga seperti :\r\n            </p>\r\n            <br>\r\n            <div class=\"container\">\r\n              <ul style=\"list-style-type: disc;\">\r\n                <li>PAPAN BUNGA Single 2in1 Steroform</li>\r\n                <li>HANDBUQUET</li>\r\n                <li>BUQUET ( Meja, Standing, box )</li>\r\n                <li>SALIB, KRANS DUKA</li>\r\n                <li>Bunga Semat / kantong</li>\r\n                <li>Dekorasi Bahagia, Duka</li>\r\n                <li>Parcel Buah, Cookies</li>\r\n                <li>dll.</li>\r\n              </ul>\r\n            </div>\r\n\r\n            <br>\r\n            <p>Produk yang kami sediakan menggunakan bunga yang fresh dan bermacam warna yang bisa\r\n              disesuaikan untuk moment Anda. Selain itu kami juga menggunakan bunga buatan untuk pengganti\r\n              bunga asli agar karangan bunga Anda tidak cepat layu.</p>', NULL, NULL, NULL, NULL, '2021-11-17 21:17:10', '2021-11-17 21:56:15', NULL),
 ('offer_decritpion2', '            <p>Toko Bunga Papan Ucapan Bandung menawarka proses pemesanan yang sangat mudah, tinggal\r\n              cari\r\n              produk yang Anda inginkan, atau rekomendasi produk sesuai dengan moment yang Anda\r\n              butuhkan\r\n              melalui katalog produk di website ini, maupun langsung hubungi team CS kami yang siap\r\n              membantu anda 24 jam untuk membantu pemesanan bunga secara online dan offline.\r\n            </p>', NULL, NULL, NULL, NULL, '2021-11-17 22:03:28', '2021-11-17 22:07:17', NULL),
 ('product', 'Bunga Terbaik Dari Kami', 'BUNGA APA YANG ANDA CARI HARI INI ?', NULL, NULL, NULL, '2021-11-18 09:59:33', '2021-11-18 09:59:52', NULL),
 ('product2', 'Kamu Mungkin Juga Suka', 'PRODUK LAIN KAMI', NULL, NULL, NULL, '2021-11-19 07:14:04', '2021-11-19 07:16:22', NULL),
+('slogan', 'Manusia Yang memiliki pribadi yang kokoh ajeg atau seimbang dalam berifikir, merasa dan bertindak.', NULL, 1, 1, NULL, '2022-01-30 13:15:40', '2022-01-30 13:17:24', NULL),
 ('testimoni', 'Kepuasan Pelanggan adalah yang utama', 'TESTIMONI', NULL, NULL, NULL, '2021-11-17 22:23:33', '2021-11-17 22:29:34', NULL);
 
 -- --------------------------------------------------------
@@ -7108,7 +7132,7 @@ INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `
 (123, 119, 'Testimoni', '-', 6, 'far fa-circle', 'admin/home/testimoni', 'Aktif', '2021-11-15 14:54:34'),
 (124, 0, 'WhatsApp', 'No whatsapp untuk produk', 3, 'fab fa-whatsapp', 'admin/whatsapp', 'Aktif', '2021-11-17 15:39:07'),
 (126, 0, 'Navigasi', '-', 4, 'fas fa-location-arrow', 'admin/menu', 'Aktif', '2021-11-17 19:09:01'),
-(127, 119, 'Logo', '-', 1, 'far fa-circle', 'admin/home/logo', 'Aktif', '2021-11-19 08:05:37'),
+(127, 2, 'Logo', '-', 1, 'far fa-circle', 'admin/home/logo', 'Aktif', '2021-11-19 08:05:37'),
 (128, 119, 'Footer', '-', 2, 'far fa-circle', 'admin/home/footer', 'Aktif', '2021-11-19 08:08:39'),
 (129, 0, 'Kepengurusan', '-', 1, 'fas fa-sitemap', 'admin/kepengurusan', 'Aktif', '2021-12-02 08:02:13'),
 (130, 0, 'Pengurus', '-', 2, 'fas fa-users', 'admin/pengurus', 'Aktif', '2021-12-16 08:03:43'),
@@ -7116,7 +7140,8 @@ INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `
 (132, 0, 'Artikel', '-', 3, 'fas fa-newspaper', '#', 'Aktif', '2022-01-07 17:33:52'),
 (133, 132, 'Daftar Artikel', '#', 1, 'far fa-circle', 'admin/artikel/daftarArtikel', 'Aktif', '2022-01-07 17:35:48'),
 (134, 132, 'Kategori', '-', 2, 'far fa-circle', 'admin/artikel/kategori', 'Aktif', '2022-01-07 22:43:52'),
-(135, 132, 'Tag', '-', 3, 'far fa-circle', 'admin/artikel/tag', 'Aktif', '2022-01-07 22:44:35');
+(135, 132, 'Tag', '-', 3, 'far fa-circle', 'admin/artikel/tag', 'Aktif', '2022-01-07 22:44:35'),
+(136, 2, 'Lainnya', '-', 6, 'far fa-circle', 'pengaturan/lainnya', 'Aktif', '2022-01-29 22:54:47');
 
 -- --------------------------------------------------------
 
@@ -7156,11 +7181,9 @@ INSERT INTO `menu_front` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterang
 (23, 16, 'Keperempuanan', '-', 7, NULL, '#', 'Aktif', '2021-12-01 22:06:43'),
 (24, 16, 'Sosmas', '-', 8, NULL, '#', 'Aktif', '2021-12-01 22:06:53'),
 (25, 0, 'Artikel', '-', 4, NULL, '#', 'Aktif', '2021-12-01 22:07:02'),
-(26, 0, 'Galeri', '-', 5, NULL, '#', 'Aktif', '2021-12-01 22:07:45'),
-(27, 0, 'Pendaftaran', '-', 6, NULL, '#', 'Aktif', '2021-12-01 22:07:55'),
-(28, 0, 'Kontak', '-', 7, NULL, '#', 'Aktif', '2021-12-01 22:08:01'),
-(29, 26, 'Kegiatan', '-', 1, NULL, '#', 'Aktif', '2021-12-01 22:08:31'),
-(30, 26, 'Lain Lain', '-', 2, NULL, '#', 'Aktif', '2021-12-01 22:08:43');
+(26, 0, 'Galeri', '-', 5, NULL, 'galeri', 'Aktif', '2021-12-01 22:07:45'),
+(27, 0, 'Pendaftaran', '-', 6, NULL, 'pendaftaran', 'Aktif', '2021-12-01 22:07:55'),
+(28, 0, 'Kontak', '-', 7, NULL, '#', 'Aktif', '2021-12-01 22:08:01');
 
 -- --------------------------------------------------------
 
@@ -7435,8 +7458,8 @@ CREATE TABLE `pengurus_periode` (
 --
 
 INSERT INTO `pengurus_periode` (`id`, `nama`, `foto`, `dari`, `sampai`, `slug`, `keterangan`, `slogan`, `visi`, `misi`, `status`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Kabinet Masagi', '9751fdd917fcb60556a3002062d3a8f8.jpeg', 2021, 2022, 'kabinet-masagi', '-', 'Ngabdi ka nagri bela ka nagara piken ngawujudkeun lemah nu sajati tur ngawangun cianjur pakidulan.', '              <p>\"Terwujudnya KARMAPACK dan masyarakat Cianjur Kidul yang menjungjung tinggi nilai, dan norma agama,\r\n                sosial\r\n                serta budaya lokal.\"</p>', '              <p>\r\n                1. Meningkatkan pemahaman dan pengalaman keagamaan bagi anggota KARMAPACK dan masyarakat Cianjru Kidul\r\n                <br>\r\n                2. Melakukan pengabdian kepada masyarakat<br>\r\n                3. Menumbuhkan rasa cinta terhadap seni dan budaya kedaerahan\r\n              </p>', 1, NULL, NULL, NULL, '2021-12-02 18:33:27', '2021-12-03 06:08:49', NULL),
-(5, 'Kabinet Sauyunan', '', 2019, 2020, 'kabinet-sauyunan', '', '-', '', '', 0, NULL, NULL, NULL, '2021-12-04 11:52:33', NULL, NULL);
+(2, 'Kabinet Masagi', '9751fdd917fcb60556a3002062d3a8f8.jpeg', 2021, 2022, 'kabinet-masagi', '-', 'Ngabdi ka nagri bela ka nagara piken ngawujudkeun lemah nu sajati tur ngawangun cianjur pakidulan.', '              <p>\"Terwujudnya KARMAPACK dan masyarakat Cianjur Kidul yang menjungjung tinggi nilai, dan norma agama,\r\n                sosial\r\n                serta budaya lokal.\"</p>', '              <p>\r\n                1. Meningkatkan pemahaman dan pengalaman keagamaan bagi anggota KARMAPACK dan masyarakat Cianjru Kidul\r\n                <br>\r\n                2. Melakukan pengabdian kepada masyarakat<br>\r\n                3. Menumbuhkan rasa cinta terhadap seni dan budaya kedaerahan\r\n              </p>', 1, NULL, 1, NULL, '2021-12-02 18:33:27', '2022-01-31 11:36:03', NULL),
+(5, 'Kabinet Sauyunan', '', 2019, 2020, 'kabinet-sauyunan', '', '-', '', '', 0, NULL, 1, NULL, '2021-12-04 11:52:33', '2022-01-31 11:36:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -7757,12 +7780,12 @@ INSERT INTO `role_aplikasi` (`rola_id`, `rola_menu_id`, `rola_lev_id`, `created_
 (255, 128, 1, '2021-11-19 08:08:51'),
 (256, 129, 1, '2021-12-02 08:02:21'),
 (257, 130, 1, '2021-12-16 08:05:33'),
-(260, 127, 1, '2021-12-31 16:46:28'),
 (261, 131, 1, '2022-01-02 15:04:40'),
 (262, 132, 1, '2022-01-07 17:34:09'),
 (263, 133, 1, '2022-01-07 17:36:13'),
 (264, 134, 1, '2022-01-07 22:43:57'),
-(265, 135, 1, '2022-01-07 22:44:41');
+(265, 135, 1, '2022-01-07 22:44:41'),
+(267, 136, 1, '2022-01-29 22:55:39');
 
 -- --------------------------------------------------------
 
@@ -8259,19 +8282,19 @@ ALTER TABLE `whatsapp`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `artikel_kategori`
 --
 ALTER TABLE `artikel_kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `artikel_kategori_detail`
 --
 ALTER TABLE `artikel_kategori_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `artikel_tag`
@@ -8355,7 +8378,7 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `menu_front`
@@ -8463,7 +8486,7 @@ ALTER TABLE `product_reviews`
 -- AUTO_INCREMENT for table `role_aplikasi`
 --
 ALTER TABLE `role_aplikasi`
-  MODIFY `rola_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=266;
+  MODIFY `rola_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=268;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -61,7 +61,7 @@ $(function () {
             `;
 
             const btn_lihat = `
-              <a class="btn btn-secondary btn-xs" href="">
+              <a class="btn btn-secondary btn-xs" href="<?= base_url()?>?kepengurusan=${full.slug}">
                 <i class="fa fa-eye"></i> Lihat
               </a>
             `;

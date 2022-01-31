@@ -45,7 +45,7 @@ class Render_Controller extends CI_Controller
 	protected $key_offer_body2 = 'offer_decritpion2';
 	// home
 	protected $key_logo = 'logo';
-	protected $key_footer_descritpion = 'footer_descritpion';
+	protected $key_slogan = 'slogan';
 
 	protected $key_footer_contact = 'footer_contact';
 	protected $key_footer_list_head = 'footer_list_head';
@@ -159,11 +159,12 @@ class Render_Controller extends CI_Controller
 			}
 
 			$data['front'] = [
-				// 'logo' => $this->key_get($this->key_logo),
+				'logo' => $this->key_get($this->key_logo),
+				'semboyan' => $this->key_get($this->key_slogan),
 				// 'list_head' => $this->key_get($this->key_footer_list_head),
 				// 'contact' => $this->key_get($this->key_footer_contact),
 				// 'copyright' => $this->key_get($this->key_footer_copyright),
-				// 'description' => $this->key_get($this->key_footer_descritpion),
+				// 'description' => $this->key_get($this->key_slogan),
 				// 'list_item' => $list_item,
 				'sosmed' => $sosmed,
 			];
@@ -513,8 +514,8 @@ class Render_Controller extends CI_Controller
 			->from('menu_front')
 			->where('menu_menu_id', 0)
 			->where('menu_status', 'Aktif')
+			->order_by('menu_index')
 			->get()->result_array();
-
 		if ($parrents == null) {
 			return [];
 		}

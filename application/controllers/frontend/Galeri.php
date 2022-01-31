@@ -1,10 +1,11 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends Render_Controller
+class Galeri extends Render_Controller
 {
 	public function index()
 	{
+		$this->navigation_front = 'galeri';
 		// kepengurusan query from url
 		$kepengurusan = $this->input->get('kepengurusan');
 		$get_kepengurusan_aktif = $this->model->getKepengurusanAktifHome($kepengurusan);
@@ -13,6 +14,7 @@ class Home extends Render_Controller
 		$this->data['misi'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->misi;
 		$this->data['slogan'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->slogan;
 		$this->data['nama'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->nama;
+
 		// get list kepengurusan sekarang
 
 		// get list artikel
