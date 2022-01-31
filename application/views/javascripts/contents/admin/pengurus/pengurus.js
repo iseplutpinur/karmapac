@@ -11,7 +11,7 @@ $(function () {
       },
       "processing": true,
       "serverSide": true,
-      "responsive": true,
+      // "responsive": true,
       "lengthChange": true,
       "autoWidth": false,
       "scrollX": true,
