@@ -351,10 +351,10 @@ class Render_Controller extends CI_Controller
 	{
 		$config = array(
 			'protocol' => 'POP3',
-			'smtp_host' => '',
+			'smtp_host' => 'mail.iseplutpi.my.id',
 			'smtp_port' => 995,
-			'smtp_user' => '',
-			'smtp_pass' => '',
+			'smtp_user' => 'me@iseplutpi.my.id',
+			'smtp_pass' => 'Suksesamin123',
 			'mailtype'  => 'html',
 			'charset'   => 'iso-8859-1'
 		);

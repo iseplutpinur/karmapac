@@ -3,9 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Galeri extends Render_Controller
 {
+
 	public function index()
 	{
 		$this->navigation_front = 'galeri';
+
 		// kepengurusan query from url
 		$kepengurusan = $this->input->get('kepengurusan');
 		$get_kepengurusan_aktif = $this->model->getKepengurusanAktifHome($kepengurusan);

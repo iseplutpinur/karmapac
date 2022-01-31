@@ -14,11 +14,19 @@ $(function () {
       "responsive": true,
       "lengthChange": true,
       "autoWidth": false,
+      "scrollX": true,
       "columns": [
         { "data": null },
         { "data": "user_nama" },
         { "data": "user_email" },
         { "data": 'npp' },
+        { "data": 'user_tgl_lahir' },
+        {
+          "data": 'ulang_tahun', render(data, type, full, meta) {
+
+            return data == 0 ? 'Hari ini' : `${data} Hari Lagi`;
+          }
+        },
         { "data": 'thn_angkatan' },
         { "data": "status_str" },
         {
@@ -27,6 +35,7 @@ $(function () {
                 <button
                 data-id="${full.id}"
                 data-npp="${full.npp}"
+                data-tanggal_lahir="${full.user_tgl_lahir}"
                 data-angkatan="${full.thn_angkatan}"
                 data-nama="${full.user_nama}"
                 data-email="${full.user_email}"
@@ -80,6 +89,7 @@ $(function () {
       $('#angkatan').val('');
       $('#nama').val('');
       $('#email').val('');
+      $('#tanggal_lahir').val('');
       $('#password').val('123456');
       $('#status').val('');
       modal_create = true;
@@ -163,6 +173,7 @@ const Ubah = (datas) => {
   $('#nama').val(data.nama);
   $('#email').val(data.email);
   $('#status').val(data.status);
+  $('#tanggal_lahir').val(data.tanggal_lahir);
   $('#password').val('');
   $('#tambahModal').modal('toggle');
   $("#tambahModalTitle").text("Ubah pengurus");

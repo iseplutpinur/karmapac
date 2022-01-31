@@ -13,6 +13,8 @@
           <th>Nama</th>
           <th>Email</th>
           <th>NPP</th>
+          <th>Tgl. Lahir</th>
+          <th>U. Tahun</th>
           <th>Angkatan</th>
           <th>Status</th>
           <th>Aksi</th>
@@ -33,7 +35,7 @@
         <form action="" id="fmain" method="post">
           <input type="hidden" id="id" name="id">
           <div class="form-group">
-            <label for="npp">Nomro Pokok Pengurus</label>
+            <label for="npp">Nomor Pokok Pengurus</label>
             <input type="text" class="form-control" id="npp" name="npp" placeholder="Nomro Pokok Pengurus" required />
           </div>
           <div class="form-group">
@@ -43,6 +45,10 @@
           <div class="form-group">
             <label for="nama">Nama</label>
             <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required />
+          </div>
+          <div class="form-group">
+            <label for="tanggal_lahir">Tanggal Lahir</label>
+            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required />
           </div>
           <div class="form-group">
             <label for="email">Email</label>

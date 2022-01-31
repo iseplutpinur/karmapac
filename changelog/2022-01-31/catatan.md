@@ -23,7 +23,6 @@
 
 ### Tentang Kami
 - Struktur Kepengurusan
-- Visi Misi
 - Periode Kepengurusan
 
 ### Profil
@@ -33,7 +32,6 @@
 
 ### Galeri Detail
 - View Gdrive embed
-
 
 ### Artikel
 

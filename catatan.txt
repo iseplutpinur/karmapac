@@ -101,3 +101,15 @@ Sensus Keanggotaan (Bisa untuk melihat ulang tahun/ mencari saudara se daerah/ d
 
 // google drive embed
 <iframe src="https://drive.google.com/embeddedfolderview?id=1P-CJPC7H1Tkd5KfLnSj580Rcmtp5cKpA#grid" style="width:100%; height:600px; border:0;"></iframe>
+
+
+
+// ambil data buat ulang tahun
+SELECT date(concat('2022-', month(user_tgl_lahir), '-', day(user_tgl_lahir))) as a, CURDATE() as b,
+( if(
+    	DATEDIFF(date(concat('2022-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE()) < 0,
+    	DATEDIFF(date(concat('2023-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE()) ,
+        DATEDIFF(date(concat('2022-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE())
+    )
+
+) as a_b FROM `users`

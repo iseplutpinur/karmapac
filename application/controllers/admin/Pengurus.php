@@ -45,12 +45,13 @@ class Pengurus extends Render_Controller
     {
         $this->db->trans_start();
         $npp = $this->input->post("npp");
+        $tanggal_lahir = $this->input->post("tanggal_lahir");
         $nama = $this->input->post("nama");
         $email = $this->input->post("email");
         $password = $this->input->post("password");
         $status = $this->input->post("status");
         $angkatan = $this->input->post("angkatan");
-        $result = $this->model->insert($npp, $nama, $angkatan, $email, $password, $status);
+        $result = $this->model->insert($npp, $nama, $angkatan, $email, $password, $status, $tanggal_lahir);
         $this->db->trans_complete();
         $code = $result ? 200 : 500;
         $this->output_json(["data" => $result], $code);
@@ -60,13 +61,14 @@ class Pengurus extends Render_Controller
     {
         $this->db->trans_start();
         $npp = $this->input->post("npp");
+        $tanggal_lahir = $this->input->post("tanggal_lahir");
         $nama = $this->input->post("nama");
         $email = $this->input->post("email");
         $password = $this->input->post("password");
         $status = $this->input->post("status");
         $angkatan = $this->input->post("angkatan");
         $id = $this->input->post("id");
-        $result = $this->model->update($id, $npp, $nama, $angkatan, $email, $password, $status);
+        $result = $this->model->update($id, $npp, $nama, $angkatan, $email, $password, $status, $tanggal_lahir);
         $this->db->trans_complete();
         $code = $result ? 200 : 500;
         $this->output_json(["data" => $result], $code);

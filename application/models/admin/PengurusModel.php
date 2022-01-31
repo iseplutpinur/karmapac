@@ -6,7 +6,16 @@ class PengurusModel extends Render_Model
   public function getAllData($draw = null, $show = null, $start = null, $cari = null, $order = null)
   {
     // select tabel
-    $this->db->select("a.user_id as id, a.npp, a.thn_angkatan, a.user_nama, a.user_email, IF(a.user_status = '0' , 'Tidak Aktif', IF(a.user_status = '1' , 'Aktif', 'Tidak Diketahui')) as status_str, a.user_status");
+    $year = (int)date('Y');
+    $year_add_one = $year + 1;
+    $this->db->select("a.user_id as id, a.npp, a.thn_angkatan, a.user_nama, a.user_email, IF(a.user_status = '0' , 'Tidak Aktif', IF(a.user_status = '1' , 'Aktif', 'Tidak Diketahui')) as status_str, a.user_status,
+    ( if(
+          DATEDIFF(date(concat('{$year}-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE()) < 0,
+          DATEDIFF(date(concat('{$year_add_one}-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE()) ,
+            DATEDIFF(date(concat('{$year}-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE())
+        )
+    ) as ulang_tahun, user_tgl_lahir
+    ");
     $this->db->from("users a");
     $this->db->where('a.user_status <>', 3);
     $this->db->where('a.level_id', $this->pengurus_level);
@@ -35,7 +44,13 @@ class PengurusModel extends Render_Model
               a.user_nama LIKE '%$cari%' or
               a.user_email LIKE '%$cari%' or
               a.user_status LIKE '%$cari%' or
-              IF(a.user_status = '0' , 'Tidak Aktif', IF(a.user_status = '1' , 'Aktif', 'Tidak Diketahui')) LIKE '%$cari%'
+              IF(a.user_status = '0' , 'Tidak Aktif', IF(a.user_status = '1' , 'Aktif', 'Tidak Diketahui')) LIKE '%$cari%' or
+              ( if(
+                    DATEDIFF(date(concat('{$year}-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE()) < 0,
+                    DATEDIFF(date(concat('{$year_add_one}-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE()) ,
+                      DATEDIFF(date(concat('{$year}-', month(user_tgl_lahir), '-', day(user_tgl_lahir))), CURDATE())
+                  )
+              ) LIKE '%$cari%'
           )");
     }
 
@@ -50,7 +65,7 @@ class PengurusModel extends Render_Model
 
 
 
-  public function insert($npp, $nama, $angkatan, $email, $password, $status)
+  public function insert($npp, $nama, $angkatan, $email, $password, $status, $tanggal_lahir)
   {
     $data['npp'] = $npp;
     $data['user_nama'] = $nama;
@@ -59,6 +74,7 @@ class PengurusModel extends Render_Model
     $data['user_password'] = $this->b_password->bcrypt_hash($password);
     $data['user_status'] = $status;
     $data['level_id'] = $this->pengurus_level;
+    $data['user_tgl_lahir'] = $tanggal_lahir;
 
     // Insert users
     $execute = $this->db->insert('users', $data);
@@ -66,11 +82,12 @@ class PengurusModel extends Render_Model
     return $execute;
   }
 
-  public function update($id, $npp, $nama, $angkatan, $email, $password, $status)
+  public function update($id, $npp, $nama, $angkatan, $email, $password, $status, $tanggal_lahir)
   {
     $data['npp'] = $npp;
     $data['user_nama'] = $nama;
     $data['thn_angkatan'] = $angkatan;
+    $data['user_tgl_lahir'] = $tanggal_lahir;
     $data['user_email'] = $email;
     if ($password != '') {
       $data['user_password'] = $this->b_password->bcrypt_hash($password);
