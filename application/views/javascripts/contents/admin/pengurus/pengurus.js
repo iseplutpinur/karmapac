@@ -61,7 +61,7 @@ $(function () {
             btn += btn_ubah;
             btn += btn_hapus;
             return `<div class="pull-right">${btn}</div>`
-          }
+          }, className: "nowrap"
         }
       ],
       columnDefs: [{
@@ -69,7 +69,7 @@ $(function () {
         targets: [0, 8]
       }],
       order: [
-        [5, 'desc']
+        [5, 'asc']
       ],
     });
     new_table.on('draw.dt', function () {
