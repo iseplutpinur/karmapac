@@ -58,6 +58,7 @@ class Galeri extends Render_Controller
 
 	public function detail($slug)
 	{
+		$this->navigation_front = 'galeri';
 		$this->preloader = false;
 		$this->data['galeri'] = $this->model->getGaleri($slug);
 		$this->title = is_null($this->data['galeri']) ? 'Galeri' : $this->data['galeri']->nama;
