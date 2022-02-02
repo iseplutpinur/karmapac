@@ -61,7 +61,7 @@ class Home extends Render_Controller
 
 		$this->navigation_type = 'front';
 		$this->title = "Home";
-		$this->content = 'front/home';
+		$this->content = 'frontend/home';
 		$this->render();
 	}
 

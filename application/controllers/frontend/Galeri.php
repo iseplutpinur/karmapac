@@ -3,35 +3,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Galeri extends Render_Controller
 {
-
 	public function index()
 	{
 		$this->navigation_front = 'galeri';
-
-		// kepengurusan query from url
-		$kepengurusan = $this->input->get('kepengurusan');
-		$get_kepengurusan_aktif = $this->model->getKepengurusanAktifHome($kepengurusan);
-		// get kepengurusan aktif
-		$this->data['visi'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->visi;
-		$this->data['misi'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->misi;
-		$this->data['slogan'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->slogan;
-		$this->data['nama'] = is_null($get_kepengurusan_aktif) ? '' : $get_kepengurusan_aktif->nama;
-
-		// get list kepengurusan sekarang
-
-		// get list artikel
-		$total_rows = $this->model->getTotalRowsArticle();
-		$per_page = 5;
-		$article_from = $this->input->get('article_from') ?? 0;
-		$articles = $this->model->getArticles($article_from, $per_page);
-
+		$total_rows = $this->model->getTotalRowsGaleri();
+		$per_page = 20;
+		$galeri_from = $this->input->get('galeri_from') ?? 0;
+		$search_key = $this->input->get('search');
+		$galeris = $this->model->getGaleris($galeri_from, $per_page, $search_key);
 		$this->load->library('pagination');
 		$this->pagination->initialize([
-			'base_url' => base_url(),
+			'base_url' => base_url('/galeri' . ((is_null($search_key) || $search_key == "") ? '' : ('?search=' . $search_key))),
 			'total_rows' => $total_rows,
 			'per_page' => $per_page,
 			'page_query_string' => true,
-			'query_string_segment' => 'article_from',
+			'query_string_segment' => 'galeri_from',
 
 			// title
 			'first_link' => 'First',
@@ -59,19 +45,23 @@ class Galeri extends Render_Controller
 
 		$pagination = $this->pagination->create_links();
 		$this->data['pagination'] = $pagination;
-		$this->data['articles'] = $articles;
+		$this->data['galeris'] = $galeris;
+		$this->data['search'] = $search_key;
 
 		// get kategori
 
 		$this->navigation_type = 'front';
-		$this->title = "Home";
-		$this->content = 'front/home';
+		$this->title = "Galeri";
+		$this->content = 'frontend/galeri';
 		$this->render();
 	}
 
 	public function detail($slug)
 	{
-		$this->title = "Home";
+		$this->preloader = false;
+		$this->data['galeri'] = $this->model->getGaleri($slug);
+		$this->title = is_null($this->data['galeri']) ? 'Galeri' : $this->data['galeri']->nama;
+		$this->content = 'frontend/galeri-detail';
 		$this->render();
 	}
 
@@ -80,7 +70,7 @@ class Galeri extends Render_Controller
 		parent::__construct();
 		$this->default_template = 'templates/karmapack';
 		$this->navigation_type = 'front';
-		$this->load->model('HomeModel', 'model');
+		$this->load->model('frontend/GaleriModel', 'model');
 		$this->load->library('plugin');
 		$this->load->helper('url');
 	}

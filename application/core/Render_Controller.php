@@ -9,6 +9,7 @@ class Render_Controller extends CI_Controller
 	protected $default_template;
 	protected $title;
 	protected $title_show = true;
+	protected $preloader = true;
 	protected $template_type;
 	protected $page_setting;
 	protected $page_nav;
@@ -161,6 +162,7 @@ class Render_Controller extends CI_Controller
 			$data['front'] = [
 				'logo' => $this->key_get($this->key_logo),
 				'semboyan' => $this->key_get($this->key_slogan),
+				'preloader' => $this->preloader,
 				// 'list_head' => $this->key_get($this->key_footer_list_head),
 				// 'contact' => $this->key_get($this->key_footer_contact),
 				// 'copyright' => $this->key_get($this->key_footer_copyright),

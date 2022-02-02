@@ -29,10 +29,11 @@ $route['pengaturan/hakakseslevel/(:num)'] = 'pengaturan/hakAksesLevel/index/$1';
 
 // =====================================================================================================================
 // frontend ============================================================================================================
-$route['home']       = 'home/index';
+$route['home'] = 'home/index';
 
 // Galeri ==============================================================================================================
-$route['galeri']     = 'frontend/galeri/index';
+$route['galeri'] = 'frontend/galeri/index';
+$route['galeri/detail/(:any)'] = 'frontend/galeri/detail/$1';
 
 // Pendaftaran =========================================================================================================
 $route['pendaftaran'] = 'frontend/pendaftaran/index';

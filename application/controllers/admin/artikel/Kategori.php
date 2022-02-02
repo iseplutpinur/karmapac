@@ -7,14 +7,14 @@ class Kategori extends Render_Controller
     public function index()
     {
         // Page Settings
-        $this->title = 'Kategori Produk';
+        $this->title = 'Kategori Artikel';
         $this->navigation = ['Kategori'];
         $this->plugins = ['datatables'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Dashboard';
         $this->breadcrumb_1_url = base_url() . 'admin/dashboard';
-        $this->breadcrumb_3 = 'Produk';
+        $this->breadcrumb_3 = 'Artikel';
         $this->breadcrumb_3_url = '#';
         $this->breadcrumb_4 = 'Kategori';
         $this->breadcrumb_4_url = base_url() . 'artikel/kategori';

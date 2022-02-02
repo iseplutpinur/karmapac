@@ -106,20 +106,22 @@
 </head>
 
 <body>
-  <!-- preloader -->
-  <div id="preloader">
-    <div class="d-flex justify-content-center align-items-center flex-column" style="height: 90vh;">
-      <img src="<?= base_url("files/logo/{$front['logo']['value1']}") ?>" style="max-width: 80px;" alt="logo" />
+  <?php if ($front['preloader']) : ?>
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="d-flex justify-content-center align-items-center flex-column" style="height: 90vh;">
+        <img src="<?= base_url("files/logo/{$front['logo']['value1']}") ?>" style="max-width: 80px;" alt="logo" />
 
-      <!-- loading animation -->
-      <div class="ms-2 lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- loading animation -->
+        <div class="ms-2 lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
 
   <!-- site wrapper -->
   <div class="site-wrapper">
@@ -192,6 +194,47 @@
     <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
       <?php $this->load->view("templates/contents/{$content}.php"); ?>
     <?php endif; ?>
+
+    <!-- instagram feed -->
+    <div class="instagram  mt-5 mb-0 py-5 bg-light">
+      <div class="container-xl">
+        <!-- button -->
+        <a href="https://instagram.com/orda_karmapack" class="btn btn-default btn-instagram">@Karmapack on Instagram</a>
+        <!-- images -->
+        <div class="instagram-feed d-flex flex-wrap">
+          <div class="insta-item col-sm-2 col-6 col-md-2">
+            <a href="#">
+              <img src="<?= base_url('assets/front') ?>/images/insta/insta-1.jpg" alt="insta-title" />
+            </a>
+          </div>
+          <div class="insta-item col-sm-2 col-6 col-md-2">
+            <a href="#">
+              <img src="<?= base_url('assets/front') ?>/images/insta/insta-2.jpg" alt="insta-title" />
+            </a>
+          </div>
+          <div class="insta-item col-sm-2 col-6 col-md-2">
+            <a href="#">
+              <img src="<?= base_url('assets/front') ?>/images/insta/insta-3.jpg" alt="insta-title" />
+            </a>
+          </div>
+          <div class="insta-item col-sm-2 col-6 col-md-2">
+            <a href="#">
+              <img src="<?= base_url('assets/front') ?>/images/insta/insta-4.jpg" alt="insta-title" />
+            </a>
+          </div>
+          <div class="insta-item col-sm-2 col-6 col-md-2">
+            <a href="#">
+              <img src="<?= base_url('assets/front') ?>/images/insta/insta-5.jpg" alt="insta-title" />
+            </a>
+          </div>
+          <div class="insta-item col-sm-2 col-6 col-md-2">
+            <a href="#">
+              <img src="<?= base_url('assets/front') ?>/images/insta/insta-6.jpg" alt="insta-title" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer -->
     <footer class="mt-0">
