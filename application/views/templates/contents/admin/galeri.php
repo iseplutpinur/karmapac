@@ -47,11 +47,11 @@
             <label for="id_gdrive">ID Folder Google Drive</label>
             <input type="text" class="form-control" id="id_gdrive" name="id_gdrive" placeholder="ID Folder Google Drive" required />
           </div>
-          <div class="form-group" style="display: none;">
+          <div class="form-group">
             <label for="foto">Icon</label>
             <input type="file" class="form-control-file" id="foto" name="foto" accept="image/png, image/jpeg, image/JPG, image/PNG, image/JPEG">
           </div>
-          <div class="form-group" style="display: none;">
+          <div class="form-group">
             <label for="foto_id_gdrive">Icon ID Gdrive</label>
             <input type="text" class="form-control" id="foto_id_gdrive" name="foto_id_gdrive" placeholder="ID Foto Google Drive">
           </div>

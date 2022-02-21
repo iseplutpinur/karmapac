@@ -104,3 +104,43 @@ Sensus Keanggotaan (Bisa untuk melihat ulang tahun/ mencari saudara se daerah/ d
 
 https://drive.google.com/uc?export=view&id=0B6wwyazyzml-OGQ3VUo0Z2thdmc
 
+## List halaman
+D=Design | B=Backend | R=Realisasi
+Home [D]
+Detail Artikel[D]
+Pencarian[D]
+Struktur Kepengurusan (Detail Periode Sekarang -> List Profil Bidang)
+  Nama
+  Dari
+  Sampai
+  Slogan
+  Visi
+  Misi
+  Anggota
+  Profil Bidang
+
+
+Periode Kepengurusan (List Periode) [D]
+  Dari - Sampai | Nama Kabinet
+  Slogan
+  Ketua
+
+Profil Bidang (Detail Bidang)
+  Logo
+  Nama
+  Slogan
+  Visi
+  Misi
+  Anggota
+
+Anggota[D]
+Detail Anggota[D]
+
+Galeri List[D, B, R]
+Galeri Detail[D, B, R]
+
+
+Pendaftaran List
+Pendaftaran Detail
+
+Kontak[D]

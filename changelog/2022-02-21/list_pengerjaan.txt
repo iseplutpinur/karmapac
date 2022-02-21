@@ -1,0 +1,59 @@
+- cms profil pengurus
+- cms riwayat kepengurusan
+
+_ = link
+
+// point point untuk tampilan profil anggota
+# Biodata
+  Foto
+  Nama Lengkap (Nama Panggilan)
+
+  Jabatan Terakhir (Nama Kabinet) thn/periode_
+
+  Angkatan: 2019_
+
+  Alamat:
+  Desa:_
+  Kecamatan:_
+
+# Kontak
+  ## Facebook
+    Isef Lutfi Nur
+
+  ## Instagram
+    Isep Lutpi Nur
+
+  ## Whatsapp
+    085798132505
+
+# Riwayat Kepengurusan
+  2019 - 2020 | Anggota Kominfo Kabinet Sauyunan_
+  2020 - 2021 | Staf Akhli Kominfo Kabinet Masagi_
+  2021 - 2022 | Ketua Kominfo Kabinet
+
+# Riwayat Pendidikan
+  ## Sekolah Dasar
+    SD Neger Tipar
+
+  ## Sekolah Lanjut Tingkat Pertama
+    SMP 46 Cibinong
+
+  ## Sekolah Lanjut Tingkat Atas
+    SMKN 1 Tanggeung | Administrasi Perkantoran_
+
+  ## Perguruan Tinggi
+    Universitas Sangga Buana YPKP | Teknik Informatika
+
+# Pengalaman Organisasi
+  2017 - 2018 | Anggota PMR SMK Negeri 1 Tanggeung
+  2018 - 2019 | Sekertaris Umum PMR SMK Negeri 1 Tanggeung
+  2021 - 2022 | Divisi Media Dan Informasi DKM Ulil Albaba Universitas Sangga Buana
+  2021 - 2022 | Staf Khusus KOMINFO Karmapack Kabinet Masagi
+
+# Pengalaman Lain
+  Hidup sendiri di kosan wkwk
+  Ditembak Cewek (cinta pertama lagih wkwk)
+
+# Hobi
+  Rebahan dan menghayal
+  Lari dari kenyataan

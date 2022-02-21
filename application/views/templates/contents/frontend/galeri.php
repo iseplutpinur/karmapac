@@ -36,13 +36,13 @@
   <div class="container-xl">
     <div class="row">
       <?php foreach ($galeris as $galeri) : ?>
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <a href="<?= base_url("galeri/detail/$galeri->slug") ?>">
-            <div class="m-2 card-main contact-item bordered rounded d-flex align-items-center">
-              <span class="icon icon-event"></span>
-              <div class="details">
-                <h3 class="mb-0 mt-0 "><?= $galeri->nama ?></h3>
-                <p class="mb-0 text-dark"><?= $galeri->keterangan ?></p>
+            <div class="card m-2 card-main">
+              <img src="<?= $galeri->foto_id_gdrive ? "https://drive.google.com/uc?export=view&id={$galeri->foto_id_gdrive}" : base_url("files/galeri/{$galeri->foto}") ?>" class="card-img-top" alt="<?= $galeri->nama ?>" style="max-width: 100%; height: auto; max-height: 200px; object-fit: cover; object-position: center;">
+              <div class="card-body">
+                <h5 class="card-title"><?= $galeri->nama ?></h5>
+                <p class="card-text text-dark"><?= $galeri->keterangan ?></p>
               </div>
             </div>
           </a>

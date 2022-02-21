@@ -5,9 +5,10 @@ class Galeri extends Render_Controller
 {
 	public function index()
 	{
+		$this->preloader = false;
 		$this->navigation_front = 'galeri';
 		$total_rows = $this->model->getTotalRowsGaleri();
-		$per_page = 20;
+		$per_page = 9;
 		$galeri_from = $this->input->get('galeri_from') ?? 0;
 		$search_key = $this->input->get('search');
 		$galeris = $this->model->getGaleris($galeri_from, $per_page, $search_key);
