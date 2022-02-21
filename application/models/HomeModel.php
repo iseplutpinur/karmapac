@@ -5,7 +5,7 @@ class HomeModel extends Render_Model
 {
   function getKepengurusanAktifHome($kepengurusan)
   {
-    $this->db->select('visi,misi,slogan,nama')
+    $this->db->select('id, visi, misi, slogan, nama, foto, dari, sampai')
       ->from('pengurus_periode');
 
     if ($kepengurusan != null) {

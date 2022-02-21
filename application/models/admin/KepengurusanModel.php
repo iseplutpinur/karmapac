@@ -24,10 +24,10 @@ class KepengurusanModel extends Render_Model
             $this->db->order_by($order_colum, $dir);
         }
 
-        // initial data table
-        if ($draw == 1) {
-            $this->db->limit(10, 0);
-        }
+        // // initial data table
+        // if ($draw == 1) {
+        //     $this->db->limit(10, 0);
+        // }
 
         // pencarian
         if ($cari != null) {
@@ -151,11 +151,6 @@ class KepengurusanModel extends Render_Model
 
             $order_colum = $columns['data'];
             $this->db->order_by($order_colum, $dir);
-        }
-
-        // initial data table
-        if ($draw == 1) {
-            $this->db->limit(10, 0);
         }
 
         if ($filter) {

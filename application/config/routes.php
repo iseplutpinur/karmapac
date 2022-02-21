@@ -37,3 +37,6 @@ $route['galeri/detail/(:any)'] = 'frontend/galeri/detail/$1';
 
 // Pendaftaran =========================================================================================================
 $route['pendaftaran'] = 'frontend/pendaftaran/index';
+
+// Kepengurusan ========================================================================================================
+$route['kepengurusan/struktur'] = 'frontend/tentang/struktur_kepengurusan';
